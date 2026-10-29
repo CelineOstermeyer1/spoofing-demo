@@ -1,0 +1,78 @@
+{
+  "name": "marketDataSchema",
+  "version": 0,
+  "fields": [
+    {
+      "id": {
+        "columnName": "timestamp_utc"
+      },
+      "dataType": {
+        "dataType": "TIMESTAMP",
+        "chronoPrecision": "MILLIS",
+        "indexParameters": {
+          "startDate": 1767225600000,
+          "durationInUnits": 0,
+          "units": "MILLIS",
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "instrument_id"
+      },
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "best_bid"
+      },
+      "dataType": {
+        "dataType": "DOUBLE",
+        "indexParameters": {
+          "anchor": 0,
+          "range": 0,
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "best_ask"
+      },
+      "dataType": {
+        "dataType": "DOUBLE",
+        "indexParameters": {
+          "anchor": 0,
+          "range": 0,
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    }
+  ]
+}

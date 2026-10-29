@@ -1,0 +1,206 @@
+{
+  "name": "marketPIX",
+  "predicates": [
+    {
+      "name": "marketPredicateSchema",
+      "schema": {
+        "name": "marketDataSchema",
+        "version": 1,
+        "fields": [
+          {
+            "id": {
+              "columnName": "timestamp_utc"
+            },
+            "dataType": {
+              "dataType": "TIMESTAMP",
+              "chronoPrecision": "MILLIS",
+              "indexParameters": {
+                "startDate": 1767225600000,
+                "durationInUnits": 0,
+                "units": "MILLIS",
+                "hashSeed": 0
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          },
+          {
+            "id": {
+              "columnName": "instrument_id"
+            },
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          },
+          {
+            "id": {
+              "columnName": "best_bid"
+            },
+            "dataType": {
+              "dataType": "DOUBLE",
+              "indexParameters": {
+                "anchor": 0,
+                "range": 0,
+                "hashSeed": 0
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          },
+          {
+            "id": {
+              "columnName": "best_ask"
+            },
+            "dataType": {
+              "dataType": "DOUBLE",
+              "indexParameters": {
+                "anchor": 0,
+                "range": 0,
+                "hashSeed": 0
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "fields": {
+    "timestamp_utc": {
+      "name": "timestamp_utc",
+      "columnIndex": 1,
+      "dataType": {
+        "dataType": "TIMESTAMP",
+        "chronoPrecision": "MILLIS",
+        "indexParameters": {
+          "units": 14,
+          "hashSeed": 0,
+          "anchor": 1767225600000,
+          "durationInUnits": 0,
+          "writeSize": 24,
+          "type": 23
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      },
+      "notNullConstraint": false,
+      "objectConstraint": false,
+      "objectDataConstraint": false,
+      "predicateConstraint": false,
+      "primaryKeyConstraint": true,
+      "signatureConstraint": false,
+      "transactionBufferConstraint": false,
+      "uniqueConstraint": false,
+      "key1SegmentDepth": 10,
+      "key2SegmentDepth": 8,
+      "key3SegmentDepth": 8
+    },
+    "instrument_id": {
+      "name": "instrument_id",
+      "columnIndex": 2,
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 425123,
+          "writeSize": 4,
+          "type": 4
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      },
+      "notNullConstraint": false,
+      "objectConstraint": false,
+      "objectDataConstraint": false,
+      "predicateConstraint": false,
+      "primaryKeyConstraint": true,
+      "signatureConstraint": false,
+      "transactionBufferConstraint": false,
+      "uniqueConstraint": false,
+      "key1SegmentDepth": 7,
+      "key2SegmentDepth": 5,
+      "key3SegmentDepth": 5
+    },
+    "best_bid": {
+      "name": "best_bid",
+      "columnIndex": 3,
+      "dataType": {
+        "dataType": "DOUBLE",
+        "indexParameters": {
+          "anchor": 0,
+          "range": 0,
+          "hashSeed": 0,
+          "writeSize": 12,
+          "type": 9
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      },
+      "notNullConstraint": false,
+      "objectConstraint": false,
+      "objectDataConstraint": false,
+      "predicateConstraint": false,
+      "primaryKeyConstraint": false,
+      "signatureConstraint": false,
+      "transactionBufferConstraint": false,
+      "uniqueConstraint": false
+    },
+    "best_ask": {
+      "name": "best_ask",
+      "columnIndex": 4,
+      "dataType": {
+        "dataType": "DOUBLE",
+        "indexParameters": {
+          "anchor": 0,
+          "range": 0,
+          "hashSeed": 0,
+          "writeSize": 12,
+          "type": 9
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      },
+      "notNullConstraint": false,
+      "objectConstraint": false,
+      "objectDataConstraint": false,
+      "predicateConstraint": false,
+      "primaryKeyConstraint": false,
+      "signatureConstraint": false,
+      "transactionBufferConstraint": false,
+      "uniqueConstraint": false
+    }
+  },
+  "key1SegmentInfo": 17,
+  "key2SegmentInfo": 13,
+  "key3SegmentInfo": 13,
+  "version": 1
+}

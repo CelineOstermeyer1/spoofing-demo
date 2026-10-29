@@ -1,0 +1,343 @@
+subject,predicate,comm_id,evidence_ref,line_no,offset_s,speaker_id,speaker_name,text,stt_confidence
+CM-0006_1,commTranscriptsDataPredicateSchema,CM-0006,,1,0.0,RISK,Risk desk,You're close to the Harbour Bank concentration limit.,0.9
+CM-0006_2,commTranscriptsDataPredicateSchema,CM-0006,,2,115.3,T130,Priya Nair,"Aware, I'll trim into the close.",0.85
+CM-0006_3,commTranscriptsDataPredicateSchema,CM-0006,,3,230.7,RISK,Risk desk,Let me know when it's done.,0.95
+CM-0007_1,commTranscriptsDataPredicateSchema,CM-0007,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Kestrel.,0.92
+CM-0007_2,commTranscriptsDataPredicateSchema,CM-0007,,2,127.0,T131,Tom Ellery,"Fine in normal size, thinner after four.",0.97
+CM-0007_3,commTranscriptsDataPredicateSchema,CM-0007,,3,254.0,SALES,Sales desk,I'll pass that on.,0.87
+CM-0008_1,commTranscriptsDataPredicateSchema,CM-0008,,1,0.0,C3200,Larchmont dealer,"Morning, any colour on Severn Mining today?",0.9
+CM-0008_2,commTranscriptsDataPredicateSchema,CM-0008,,2,14.5,T104,Jordan Kerr,"Quiet so far, a bit of interest from the long-only side.",0.87
+CM-0008_3,commTranscriptsDataPredicateSchema,CM-0008,,3,29.0,C3200,Larchmont dealer,"Okay, keep me posted.",0.92
+CM-0008_4,commTranscriptsDataPredicateSchema,CM-0008,,4,43.5,T104,Jordan Kerr,Will do.,0.85
+CM-0009_1,commTranscriptsDataPredicateSchema,CM-0009,,1,0.0,C3200,Larchmont dealer,"Morning, any colour on Harbour Bank today?",0.93
+CM-0009_2,commTranscriptsDataPredicateSchema,CM-0009,,2,79.5,T131,Tom Ellery,"Quiet so far, a bit of interest from the long-only side.",0.92
+CM-0009_3,commTranscriptsDataPredicateSchema,CM-0009,,3,159.0,C3200,Larchmont dealer,"Okay, keep me posted.",0.85
+CM-0009_4,commTranscriptsDataPredicateSchema,CM-0009,,4,238.5,T131,Tom Ellery,Will do.,0.92
+CM-0010_1,commTranscriptsDataPredicateSchema,CM-0010,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Harbour Bank.,0.85
+CM-0010_2,commTranscriptsDataPredicateSchema,CM-0010,,2,101.3,T131,Tom Ellery,"Fine in normal size, thinner after four.",0.96
+CM-0010_3,commTranscriptsDataPredicateSchema,CM-0010,,3,202.7,SALES,Sales desk,I'll pass that on.,0.88
+CM-0013_1,commTranscriptsDataPredicateSchema,CM-0013,,1,0.0,T101,Alex Morrow,"Your Britwell order is done, I'll send the fills over.",0.86
+CM-0013_2,commTranscriptsDataPredicateSchema,CM-0013,,2,89.8,C3201,Ardent dealer,"Thanks, what was the average?",0.88
+CM-0013_3,commTranscriptsDataPredicateSchema,CM-0013,,3,179.5,T101,Alex Morrow,"Close to the VWAP, details on the confirm.",0.95
+CM-0013_4,commTranscriptsDataPredicateSchema,CM-0013,,4,269.2,C3201,Ardent dealer,"Great, cheers.",0.87
+CM-0012_1,commTranscriptsDataPredicateSchema,CM-0012,,1,0.0,T101,Alex Morrow,"Your Kestrel order is done, I'll send the fills over.",0.85
+CM-0012_2,commTranscriptsDataPredicateSchema,CM-0012,,2,42.5,C3200,Larchmont dealer,"Thanks, what was the average?",0.94
+CM-0012_3,commTranscriptsDataPredicateSchema,CM-0012,,3,85.0,T101,Alex Morrow,"Close to the VWAP, details on the confirm.",0.92
+CM-0012_4,commTranscriptsDataPredicateSchema,CM-0012,,4,127.5,C3200,Larchmont dealer,"Great, cheers.",0.93
+CM-0011_1,commTranscriptsDataPredicateSchema,CM-0011,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.9
+CM-0011_2,commTranscriptsDataPredicateSchema,CM-0011,,2,128.0,T131,Tom Ellery,"Small buyer of Britwell, nothing else.",0.88
+CM-0011_3,commTranscriptsDataPredicateSchema,CM-0011,,3,256.0,SALES,Sales desk,Got it.,0.92
+CM-0015_1,commTranscriptsDataPredicateSchema,CM-0015,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.88
+CM-0015_2,commTranscriptsDataPredicateSchema,CM-0015,,2,67.7,T131,Tom Ellery,"Small buyer of Kestrel, nothing else.",0.95
+CM-0015_3,commTranscriptsDataPredicateSchema,CM-0015,,3,135.3,SALES,Sales desk,Got it.,0.94
+CM-0017_1,commTranscriptsDataPredicateSchema,CM-0017,,1,0.0,T120,Sam Okafor,"Your Northgate order is done, I'll send the fills over.",0.92
+CM-0017_2,commTranscriptsDataPredicateSchema,CM-0017,,2,92.8,C3200,Larchmont dealer,"Thanks, what was the average?",0.91
+CM-0017_3,commTranscriptsDataPredicateSchema,CM-0017,,3,185.5,T120,Sam Okafor,"Close to the VWAP, details on the confirm.",0.96
+CM-0017_4,commTranscriptsDataPredicateSchema,CM-0017,,4,278.2,C3200,Larchmont dealer,"Great, cheers.",0.94
+CM-0016_1,commTranscriptsDataPredicateSchema,CM-0016,,1,0.0,RISK,Risk desk,You're close to the Britwell concentration limit.,0.98
+CM-0016_2,commTranscriptsDataPredicateSchema,CM-0016,,2,119.0,T120,Sam Okafor,"Aware, I'll trim into the close.",0.86
+CM-0016_3,commTranscriptsDataPredicateSchema,CM-0016,,3,238.0,RISK,Risk desk,Let me know when it's done.,0.9
+CM-0014_1,commTranscriptsDataPredicateSchema,CM-0014,,1,0.0,C3201,Ardent dealer,Can you work twenty thousand Harbour Bank through the day?,0.97
+CM-0014_2,commTranscriptsDataPredicateSchema,CM-0014,,2,66.8,T120,Sam Okafor,"Sure, VWAP to the close?",0.9
+CM-0014_3,commTranscriptsDataPredicateSchema,CM-0014,,3,133.5,C3201,Ardent dealer,"Yes please, nothing aggressive.",0.97
+CM-0014_4,commTranscriptsDataPredicateSchema,CM-0014,,4,200.2,T120,Sam Okafor,Understood.,0.85
+CM-0021_1,commTranscriptsDataPredicateSchema,CM-0021,,1,0.0,C3201,Ardent dealer,Can you work twenty thousand Kestrel through the day?,0.94
+CM-0021_2,commTranscriptsDataPredicateSchema,CM-0021,,2,49.8,T104,Jordan Kerr,"Sure, VWAP to the close?",0.92
+CM-0021_3,commTranscriptsDataPredicateSchema,CM-0021,,3,99.5,C3201,Ardent dealer,"Yes please, nothing aggressive.",0.92
+CM-0021_4,commTranscriptsDataPredicateSchema,CM-0021,,4,149.2,T104,Jordan Kerr,Understood.,0.9
+CM-0018_1,commTranscriptsDataPredicateSchema,CM-0018,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Kestrel.,0.91
+CM-0018_2,commTranscriptsDataPredicateSchema,CM-0018,,2,20.0,T101,Alex Morrow,"Fine in normal size, thinner after four.",0.93
+CM-0018_3,commTranscriptsDataPredicateSchema,CM-0018,,3,40.0,SALES,Sales desk,I'll pass that on.,0.85
+CM-0019_1,commTranscriptsDataPredicateSchema,CM-0019,,1,0.0,RISK,Risk desk,You're close to the Britwell concentration limit.,0.98
+CM-0019_2,commTranscriptsDataPredicateSchema,CM-0019,,2,63.3,T120,Sam Okafor,"Aware, I'll trim into the close.",0.96
+CM-0019_3,commTranscriptsDataPredicateSchema,CM-0019,,3,126.7,RISK,Risk desk,Let me know when it's done.,0.88
+CM-0020_1,commTranscriptsDataPredicateSchema,CM-0020,,1,0.0,T131,Tom Ellery,"Heads up, results from Kestrel on Thursday.",0.84
+CM-0020_2,commTranscriptsDataPredicateSchema,CM-0020,,2,114.7,C3200,Larchmont dealer,"Noted, we'll probably sit on our hands until then.",0.9
+CM-0020_3,commTranscriptsDataPredicateSchema,CM-0020,,3,229.3,T131,Tom Ellery,Makes sense.,0.86
+CM-0022_1,commTranscriptsDataPredicateSchema,CM-0022,,1,0.0,C3201,Ardent dealer,"Morning, any colour on Severn Mining today?",0.85
+CM-0022_2,commTranscriptsDataPredicateSchema,CM-0022,,2,8.2,T120,Sam Okafor,"Quiet so far, a bit of interest from the long-only side.",0.95
+CM-0022_3,commTranscriptsDataPredicateSchema,CM-0022,,3,16.5,C3201,Ardent dealer,"Okay, keep me posted.",0.86
+CM-0022_4,commTranscriptsDataPredicateSchema,CM-0022,,4,24.8,T120,Sam Okafor,Will do.,0.87
+CM-0025_1,commTranscriptsDataPredicateSchema,CM-0025,,1,0.0,T101,Alex Morrow,"Heads up, results from Severn Mining on Thursday.",0.85
+CM-0025_2,commTranscriptsDataPredicateSchema,CM-0025,,2,55.3,C3201,Ardent dealer,"Noted, we'll probably sit on our hands until then.",0.9
+CM-0025_3,commTranscriptsDataPredicateSchema,CM-0025,,3,110.7,T101,Alex Morrow,Makes sense.,0.92
+CM-0023_1,commTranscriptsDataPredicateSchema,CM-0023,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Severn Mining.,0.96
+CM-0023_2,commTranscriptsDataPredicateSchema,CM-0023,,2,72.7,T131,Tom Ellery,"Fine in normal size, thinner after four.",0.88
+CM-0023_3,commTranscriptsDataPredicateSchema,CM-0023,,3,145.3,SALES,Sales desk,I'll pass that on.,0.9
+CM-0024_1,commTranscriptsDataPredicateSchema,CM-0024,,1,0.0,C3200,Larchmont dealer,Can you work twenty thousand Severn Mining through the day?,0.97
+CM-0024_2,commTranscriptsDataPredicateSchema,CM-0024,,2,38.2,T104,Jordan Kerr,"Sure, VWAP to the close?",0.86
+CM-0024_3,commTranscriptsDataPredicateSchema,CM-0024,,3,76.5,C3200,Larchmont dealer,"Yes please, nothing aggressive.",0.86
+CM-0024_4,commTranscriptsDataPredicateSchema,CM-0024,,4,114.8,T104,Jordan Kerr,Understood.,0.87
+CM-0026_1,commTranscriptsDataPredicateSchema,CM-0026,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Northgate.,0.91
+CM-0026_2,commTranscriptsDataPredicateSchema,CM-0026,,2,56.0,T101,Alex Morrow,"Fine in normal size, thinner after four.",0.92
+CM-0026_3,commTranscriptsDataPredicateSchema,CM-0026,,3,112.0,SALES,Sales desk,I'll pass that on.,0.88
+CM-0028_1,commTranscriptsDataPredicateSchema,CM-0028,,1,0.0,RISK,Risk desk,Can you confirm your end-of-day delta?,0.9
+CM-0028_2,commTranscriptsDataPredicateSchema,CM-0028,,2,84.0,T130,Priya Nair,"Sending it over now, flat on the index.",0.89
+CM-0028_3,commTranscriptsDataPredicateSchema,CM-0028,,3,168.0,RISK,Risk desk,Thanks.,0.92
+CM-0029_1,commTranscriptsDataPredicateSchema,CM-0029,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Britwell.,0.97
+CM-0029_2,commTranscriptsDataPredicateSchema,CM-0029,,2,92.7,T104,Jordan Kerr,"Fine in normal size, thinner after four.",0.93
+CM-0029_3,commTranscriptsDataPredicateSchema,CM-0029,,3,185.3,SALES,Sales desk,I'll pass that on.,0.94
+CM-0027_1,commTranscriptsDataPredicateSchema,CM-0027,,1,0.0,T130,Priya Nair,"Heads up, results from Britwell on Thursday.",0.89
+CM-0027_2,commTranscriptsDataPredicateSchema,CM-0027,,2,103.3,C3200,Larchmont dealer,"Noted, we'll probably sit on our hands until then.",0.9
+CM-0027_3,commTranscriptsDataPredicateSchema,CM-0027,,3,206.7,T130,Priya Nair,Makes sense.,0.85
+CM-0033_1,commTranscriptsDataPredicateSchema,CM-0033,,1,0.0,T131,Tom Ellery,"Heads up, results from Northgate on Thursday.",0.87
+CM-0033_2,commTranscriptsDataPredicateSchema,CM-0033,,2,80.7,C3200,Larchmont dealer,"Noted, we'll probably sit on our hands until then.",0.98
+CM-0033_3,commTranscriptsDataPredicateSchema,CM-0033,,3,161.3,T131,Tom Ellery,Makes sense.,0.9
+CM-0032_1,commTranscriptsDataPredicateSchema,CM-0032,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Kestrel.,0.92
+CM-0032_2,commTranscriptsDataPredicateSchema,CM-0032,,2,115.3,T101,Alex Morrow,"Fine in normal size, thinner after four.",0.85
+CM-0032_3,commTranscriptsDataPredicateSchema,CM-0032,,3,230.7,SALES,Sales desk,I'll pass that on.,0.92
+CM-0030_1,commTranscriptsDataPredicateSchema,CM-0030,,1,0.0,C3201,Ardent dealer,"Morning, any colour on Kestrel today?",0.93
+CM-0030_2,commTranscriptsDataPredicateSchema,CM-0030,,2,92.5,T131,Tom Ellery,"Quiet so far, a bit of interest from the long-only side.",0.85
+CM-0030_3,commTranscriptsDataPredicateSchema,CM-0030,,3,185.0,C3201,Ardent dealer,"Okay, keep me posted.",0.87
+CM-0030_4,commTranscriptsDataPredicateSchema,CM-0030,,4,277.5,T131,Tom Ellery,Will do.,0.89
+CM-0031_1,commTranscriptsDataPredicateSchema,CM-0031,,1,0.0,C3200,Larchmont dealer,Can you work twenty thousand Kestrel through the day?,0.92
+CM-0031_2,commTranscriptsDataPredicateSchema,CM-0031,,2,56.8,T130,Priya Nair,"Sure, VWAP to the close?",0.91
+CM-0031_3,commTranscriptsDataPredicateSchema,CM-0031,,3,113.5,C3200,Larchmont dealer,"Yes please, nothing aggressive.",0.86
+CM-0031_4,commTranscriptsDataPredicateSchema,CM-0031,,4,170.2,T130,Priya Nair,Understood.,0.91
+CM-0035_1,commTranscriptsDataPredicateSchema,CM-0035,,1,0.0,T120,Sam Okafor,"Heads up, results from Severn Mining on Thursday.",0.91
+CM-0035_2,commTranscriptsDataPredicateSchema,CM-0035,,2,26.7,C3200,Larchmont dealer,"Noted, we'll probably sit on our hands until then.",0.85
+CM-0035_3,commTranscriptsDataPredicateSchema,CM-0035,,3,53.3,T120,Sam Okafor,Makes sense.,0.85
+CM-0037_1,commTranscriptsDataPredicateSchema,CM-0037,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.91
+CM-0037_2,commTranscriptsDataPredicateSchema,CM-0037,,2,111.7,T120,Sam Okafor,"Small buyer of Kestrel, nothing else.",0.94
+CM-0037_3,commTranscriptsDataPredicateSchema,CM-0037,,3,223.3,SALES,Sales desk,Got it.,0.91
+CM-0034_1,commTranscriptsDataPredicateSchema,CM-0034,,1,0.0,RISK,Risk desk,Can you confirm your end-of-day delta?,0.89
+CM-0034_2,commTranscriptsDataPredicateSchema,CM-0034,,2,83.3,T131,Tom Ellery,"Sending it over now, flat on the index.",0.94
+CM-0034_3,commTranscriptsDataPredicateSchema,CM-0034,,3,166.7,RISK,Risk desk,Thanks.,0.97
+CM-0036_1,commTranscriptsDataPredicateSchema,CM-0036,,1,0.0,C3201,Ardent dealer,Can you work twenty thousand Northgate through the day?,0.94
+CM-0036_2,commTranscriptsDataPredicateSchema,CM-0036,,2,80.2,T131,Tom Ellery,"Sure, VWAP to the close?",0.88
+CM-0036_3,commTranscriptsDataPredicateSchema,CM-0036,,3,160.5,C3201,Ardent dealer,"Yes please, nothing aggressive.",0.89
+CM-0036_4,commTranscriptsDataPredicateSchema,CM-0036,,4,240.8,T131,Tom Ellery,Understood.,0.86
+CM-0041_1,commTranscriptsDataPredicateSchema,CM-0041,,1,0.0,T101,Alex Morrow,"Your Britwell order is done, I'll send the fills over.",0.92
+CM-0041_2,commTranscriptsDataPredicateSchema,CM-0041,,2,42.2,C3201,Ardent dealer,"Thanks, what was the average?",0.91
+CM-0041_3,commTranscriptsDataPredicateSchema,CM-0041,,3,84.5,T101,Alex Morrow,"Close to the VWAP, details on the confirm.",0.93
+CM-0041_4,commTranscriptsDataPredicateSchema,CM-0041,,4,126.8,C3201,Ardent dealer,"Great, cheers.",0.93
+CM-0039_1,commTranscriptsDataPredicateSchema,CM-0039,,1,0.0,T130,Priya Nair,"Your Harbour Bank order is done, I'll send the fills over.",0.95
+CM-0039_2,commTranscriptsDataPredicateSchema,CM-0039,,2,22.0,C3200,Larchmont dealer,"Thanks, what was the average?",0.94
+CM-0039_3,commTranscriptsDataPredicateSchema,CM-0039,,3,44.0,T130,Priya Nair,"Close to the VWAP, details on the confirm.",0.87
+CM-0039_4,commTranscriptsDataPredicateSchema,CM-0039,,4,66.0,C3200,Larchmont dealer,"Great, cheers.",0.91
+CM-0040_1,commTranscriptsDataPredicateSchema,CM-0040,,1,0.0,C3200,Larchmont dealer,Can you work twenty thousand Northgate through the day?,0.98
+CM-0040_2,commTranscriptsDataPredicateSchema,CM-0040,,2,77.5,T101,Alex Morrow,"Sure, VWAP to the close?",0.95
+CM-0040_3,commTranscriptsDataPredicateSchema,CM-0040,,3,155.0,C3200,Larchmont dealer,"Yes please, nothing aggressive.",0.91
+CM-0040_4,commTranscriptsDataPredicateSchema,CM-0040,,4,232.5,T101,Alex Morrow,Understood.,0.87
+CM-0038_1,commTranscriptsDataPredicateSchema,CM-0038,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.95
+CM-0038_2,commTranscriptsDataPredicateSchema,CM-0038,,2,70.0,T104,Jordan Kerr,"Small buyer of Severn Mining, nothing else.",0.94
+CM-0038_3,commTranscriptsDataPredicateSchema,CM-0038,,3,140.0,SALES,Sales desk,Got it.,0.89
+CM-0045_1,commTranscriptsDataPredicateSchema,CM-0045,,1,0.0,C3201,Ardent dealer,Can you work twenty thousand Northgate through the day?,0.87
+CM-0045_2,commTranscriptsDataPredicateSchema,CM-0045,,2,62.2,T104,Jordan Kerr,"Sure, VWAP to the close?",0.87
+CM-0045_3,commTranscriptsDataPredicateSchema,CM-0045,,3,124.5,C3201,Ardent dealer,"Yes please, nothing aggressive.",0.87
+CM-0045_4,commTranscriptsDataPredicateSchema,CM-0045,,4,186.8,T104,Jordan Kerr,Understood.,0.87
+CM-0042_1,commTranscriptsDataPredicateSchema,CM-0042,,1,0.0,C3200,Larchmont dealer,"Morning, any colour on Severn Mining today?",0.97
+CM-0042_2,commTranscriptsDataPredicateSchema,CM-0042,,2,71.8,T104,Jordan Kerr,"Quiet so far, a bit of interest from the long-only side.",0.89
+CM-0042_3,commTranscriptsDataPredicateSchema,CM-0042,,3,143.5,C3200,Larchmont dealer,"Okay, keep me posted.",0.93
+CM-0042_4,commTranscriptsDataPredicateSchema,CM-0042,,4,215.2,T104,Jordan Kerr,Will do.,0.96
+CM-0043_1,commTranscriptsDataPredicateSchema,CM-0043,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Severn Mining.,0.95
+CM-0043_2,commTranscriptsDataPredicateSchema,CM-0043,,2,46.7,T104,Jordan Kerr,"Fine in normal size, thinner after four.",0.95
+CM-0043_3,commTranscriptsDataPredicateSchema,CM-0043,,3,93.3,SALES,Sales desk,I'll pass that on.,0.91
+CM-0044_1,commTranscriptsDataPredicateSchema,CM-0044,,1,0.0,T120,Sam Okafor,"Your Severn Mining order is done, I'll send the fills over.",0.95
+CM-0044_2,commTranscriptsDataPredicateSchema,CM-0044,,2,96.2,C3200,Larchmont dealer,"Thanks, what was the average?",0.89
+CM-0044_3,commTranscriptsDataPredicateSchema,CM-0044,,3,192.5,T120,Sam Okafor,"Close to the VWAP, details on the confirm.",0.95
+CM-0044_4,commTranscriptsDataPredicateSchema,CM-0044,,4,288.8,C3200,Larchmont dealer,"Great, cheers.",0.98
+CM-0046_1,commTranscriptsDataPredicateSchema,CM-0046,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.9
+CM-0046_2,commTranscriptsDataPredicateSchema,CM-0046,,2,110.3,T130,Priya Nair,"Small buyer of Severn Mining, nothing else.",0.97
+CM-0046_3,commTranscriptsDataPredicateSchema,CM-0046,,3,220.7,SALES,Sales desk,Got it.,0.94
+CM-0047_1,commTranscriptsDataPredicateSchema,CM-0047,,1,0.0,T120,Sam Okafor,"Your Harbour Bank order is done, I'll send the fills over.",0.84
+CM-0047_2,commTranscriptsDataPredicateSchema,CM-0047,,2,95.0,C3201,Ardent dealer,"Thanks, what was the average?",0.92
+CM-0047_3,commTranscriptsDataPredicateSchema,CM-0047,,3,190.0,T120,Sam Okafor,"Close to the VWAP, details on the confirm.",0.91
+CM-0047_4,commTranscriptsDataPredicateSchema,CM-0047,,4,285.0,C3201,Ardent dealer,"Great, cheers.",0.93
+CM-0048_1,commTranscriptsDataPredicateSchema,CM-0048,,1,0.0,T120,Sam Okafor,"Heads up, results from Kestrel on Thursday.",0.86
+CM-0048_2,commTranscriptsDataPredicateSchema,CM-0048,,2,100.0,C3201,Ardent dealer,"Noted, we'll probably sit on our hands until then.",0.92
+CM-0048_3,commTranscriptsDataPredicateSchema,CM-0048,,3,200.0,T120,Sam Okafor,Makes sense.,0.84
+CM-0049_1,commTranscriptsDataPredicateSchema,CM-0049,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Britwell.,0.94
+CM-0049_2,commTranscriptsDataPredicateSchema,CM-0049,,2,46.7,T131,Tom Ellery,"Fine in normal size, thinner after four.",0.86
+CM-0049_3,commTranscriptsDataPredicateSchema,CM-0049,,3,93.3,SALES,Sales desk,I'll pass that on.,0.98
+CM-0053_1,commTranscriptsDataPredicateSchema,CM-0053,,1,0.0,T131,Tom Ellery,"Your Harbour Bank order is done, I'll send the fills over.",0.84
+CM-0053_2,commTranscriptsDataPredicateSchema,CM-0053,,2,13.2,C3200,Larchmont dealer,"Thanks, what was the average?",0.87
+CM-0053_3,commTranscriptsDataPredicateSchema,CM-0053,,3,26.5,T131,Tom Ellery,"Close to the VWAP, details on the confirm.",0.91
+CM-0053_4,commTranscriptsDataPredicateSchema,CM-0053,,4,39.8,C3200,Larchmont dealer,"Great, cheers.",0.95
+CM-0050_1,commTranscriptsDataPredicateSchema,CM-0050,,1,0.0,RISK,Risk desk,You're close to the Kestrel concentration limit.,0.92
+CM-0050_2,commTranscriptsDataPredicateSchema,CM-0050,,2,94.7,T104,Jordan Kerr,"Aware, I'll trim into the close.",0.96
+CM-0050_3,commTranscriptsDataPredicateSchema,CM-0050,,3,189.3,RISK,Risk desk,Let me know when it's done.,0.85
+CM-0052_1,commTranscriptsDataPredicateSchema,CM-0052,,1,0.0,RISK,Risk desk,You're close to the Severn Mining concentration limit.,0.93
+CM-0052_2,commTranscriptsDataPredicateSchema,CM-0052,,2,20.7,T131,Tom Ellery,"Aware, I'll trim into the close.",0.95
+CM-0052_3,commTranscriptsDataPredicateSchema,CM-0052,,3,41.3,RISK,Risk desk,Let me know when it's done.,0.91
+CM-0051_1,commTranscriptsDataPredicateSchema,CM-0051,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Britwell.,0.86
+CM-0051_2,commTranscriptsDataPredicateSchema,CM-0051,,2,14.0,T120,Sam Okafor,"Fine in normal size, thinner after four.",0.91
+CM-0051_3,commTranscriptsDataPredicateSchema,CM-0051,,3,28.0,SALES,Sales desk,I'll pass that on.,0.96
+CM-0054_1,commTranscriptsDataPredicateSchema,CM-0054,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Britwell.,0.84
+CM-0054_2,commTranscriptsDataPredicateSchema,CM-0054,,2,69.0,T104,Jordan Kerr,"Fine in normal size, thinner after four.",0.95
+CM-0054_3,commTranscriptsDataPredicateSchema,CM-0054,,3,138.0,SALES,Sales desk,I'll pass that on.,0.86
+CM-0056_1,commTranscriptsDataPredicateSchema,CM-0056,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.94
+CM-0056_2,commTranscriptsDataPredicateSchema,CM-0056,,2,69.7,T104,Jordan Kerr,"Small buyer of Britwell, nothing else.",0.92
+CM-0056_3,commTranscriptsDataPredicateSchema,CM-0056,,3,139.3,SALES,Sales desk,Got it.,0.89
+CM-0057_1,commTranscriptsDataPredicateSchema,CM-0057,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.96
+CM-0057_2,commTranscriptsDataPredicateSchema,CM-0057,,2,59.0,T104,Jordan Kerr,"Small buyer of Northgate, nothing else.",0.85
+CM-0057_3,commTranscriptsDataPredicateSchema,CM-0057,,3,118.0,SALES,Sales desk,Got it.,0.87
+CM-0055_1,commTranscriptsDataPredicateSchema,CM-0055,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Northgate.,0.91
+CM-0055_2,commTranscriptsDataPredicateSchema,CM-0055,,2,77.0,T120,Sam Okafor,"Fine in normal size, thinner after four.",0.92
+CM-0055_3,commTranscriptsDataPredicateSchema,CM-0055,,3,154.0,SALES,Sales desk,I'll pass that on.,0.95
+CM-0061_1,commTranscriptsDataPredicateSchema,CM-0061,,1,0.0,RISK,Risk desk,Can you confirm your end-of-day delta?,0.89
+CM-0061_2,commTranscriptsDataPredicateSchema,CM-0061,,2,58.3,T101,Alex Morrow,"Sending it over now, flat on the index.",0.98
+CM-0061_3,commTranscriptsDataPredicateSchema,CM-0061,,3,116.7,RISK,Risk desk,Thanks.,0.92
+CM-0060_1,commTranscriptsDataPredicateSchema,CM-0060,,1,0.0,T131,Tom Ellery,"Your Kestrel order is done, I'll send the fills over.",0.9
+CM-0060_2,commTranscriptsDataPredicateSchema,CM-0060,,2,44.2,C3200,Larchmont dealer,"Thanks, what was the average?",0.91
+CM-0060_3,commTranscriptsDataPredicateSchema,CM-0060,,3,88.5,T131,Tom Ellery,"Close to the VWAP, details on the confirm.",0.91
+CM-0060_4,commTranscriptsDataPredicateSchema,CM-0060,,4,132.8,C3200,Larchmont dealer,"Great, cheers.",0.97
+CM-0058_1,commTranscriptsDataPredicateSchema,CM-0058,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.96
+CM-0058_2,commTranscriptsDataPredicateSchema,CM-0058,,2,115.7,T104,Jordan Kerr,"Small buyer of Britwell, nothing else.",0.87
+CM-0058_3,commTranscriptsDataPredicateSchema,CM-0058,,3,231.3,SALES,Sales desk,Got it.,0.9
+CM-0059_1,commTranscriptsDataPredicateSchema,CM-0059,,1,0.0,RISK,Risk desk,You're close to the Northgate concentration limit.,0.89
+CM-0059_2,commTranscriptsDataPredicateSchema,CM-0059,,2,88.7,T104,Jordan Kerr,"Aware, I'll trim into the close.",0.88
+CM-0059_3,commTranscriptsDataPredicateSchema,CM-0059,,3,177.3,RISK,Risk desk,Let me know when it's done.,0.93
+CM-0065_1,commTranscriptsDataPredicateSchema,CM-0065,,1,0.0,T104,Jordan Kerr,"Heads up, results from Northgate on Thursday.",0.87
+CM-0065_2,commTranscriptsDataPredicateSchema,CM-0065,,2,92.3,C3201,Ardent dealer,"Noted, we'll probably sit on our hands until then.",0.88
+CM-0065_3,commTranscriptsDataPredicateSchema,CM-0065,,3,184.7,T104,Jordan Kerr,Makes sense.,0.86
+CM-0062_1,commTranscriptsDataPredicateSchema,CM-0062,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Kestrel.,0.86
+CM-0062_2,commTranscriptsDataPredicateSchema,CM-0062,,2,27.0,T120,Sam Okafor,"Fine in normal size, thinner after four.",0.96
+CM-0062_3,commTranscriptsDataPredicateSchema,CM-0062,,3,54.0,SALES,Sales desk,I'll pass that on.,0.98
+CM-0064_1,commTranscriptsDataPredicateSchema,CM-0064,,1,0.0,RISK,Risk desk,Can you confirm your end-of-day delta?,0.9
+CM-0064_2,commTranscriptsDataPredicateSchema,CM-0064,,2,13.7,T130,Priya Nair,"Sending it over now, flat on the index.",0.91
+CM-0064_3,commTranscriptsDataPredicateSchema,CM-0064,,3,27.3,RISK,Risk desk,Thanks.,0.98
+CM-0063_1,commTranscriptsDataPredicateSchema,CM-0063,,1,0.0,T131,Tom Ellery,"Your Harbour Bank order is done, I'll send the fills over.",0.94
+CM-0063_2,commTranscriptsDataPredicateSchema,CM-0063,,2,85.8,C3200,Larchmont dealer,"Thanks, what was the average?",0.98
+CM-0063_3,commTranscriptsDataPredicateSchema,CM-0063,,3,171.5,T131,Tom Ellery,"Close to the VWAP, details on the confirm.",0.9
+CM-0063_4,commTranscriptsDataPredicateSchema,CM-0063,,4,257.2,C3200,Larchmont dealer,"Great, cheers.",0.9
+CM-0067_1,commTranscriptsDataPredicateSchema,CM-0067,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.85
+CM-0067_2,commTranscriptsDataPredicateSchema,CM-0067,,2,34.0,T130,Priya Nair,"Small buyer of Kestrel, nothing else.",0.89
+CM-0067_3,commTranscriptsDataPredicateSchema,CM-0067,,3,68.0,SALES,Sales desk,Got it.,0.89
+CM-0069_1,commTranscriptsDataPredicateSchema,CM-0069,,1,0.0,T130,Priya Nair,"Heads up, results from Severn Mining on Thursday.",0.94
+CM-0069_2,commTranscriptsDataPredicateSchema,CM-0069,,2,61.7,C3200,Larchmont dealer,"Noted, we'll probably sit on our hands until then.",0.89
+CM-0069_3,commTranscriptsDataPredicateSchema,CM-0069,,3,123.3,T130,Priya Nair,Makes sense.,0.91
+CM-0068_1,commTranscriptsDataPredicateSchema,CM-0068,,1,0.0,C3201,Ardent dealer,Can you work twenty thousand Britwell through the day?,0.97
+CM-0068_2,commTranscriptsDataPredicateSchema,CM-0068,,2,79.0,T120,Sam Okafor,"Sure, VWAP to the close?",0.86
+CM-0068_3,commTranscriptsDataPredicateSchema,CM-0068,,3,158.0,C3201,Ardent dealer,"Yes please, nothing aggressive.",0.97
+CM-0068_4,commTranscriptsDataPredicateSchema,CM-0068,,4,237.0,T120,Sam Okafor,Understood.,0.87
+CM-0066_1,commTranscriptsDataPredicateSchema,CM-0066,,1,0.0,RISK,Risk desk,Can you confirm your end-of-day delta?,0.88
+CM-0066_2,commTranscriptsDataPredicateSchema,CM-0066,,2,21.3,T130,Priya Nair,"Sending it over now, flat on the index.",0.85
+CM-0066_3,commTranscriptsDataPredicateSchema,CM-0066,,3,42.7,RISK,Risk desk,Thanks.,0.95
+CM-0071_1,commTranscriptsDataPredicateSchema,CM-0071,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.95
+CM-0071_2,commTranscriptsDataPredicateSchema,CM-0071,,2,81.0,T131,Tom Ellery,"Small buyer of Harbour Bank, nothing else.",0.96
+CM-0071_3,commTranscriptsDataPredicateSchema,CM-0071,,3,162.0,SALES,Sales desk,Got it.,0.93
+CM-0070_1,commTranscriptsDataPredicateSchema,CM-0070,,1,0.0,C3200,Larchmont dealer,Can you work twenty thousand Severn Mining through the day?,0.86
+CM-0070_2,commTranscriptsDataPredicateSchema,CM-0070,,2,87.8,T131,Tom Ellery,"Sure, VWAP to the close?",0.97
+CM-0070_3,commTranscriptsDataPredicateSchema,CM-0070,,3,175.5,C3200,Larchmont dealer,"Yes please, nothing aggressive.",0.92
+CM-0070_4,commTranscriptsDataPredicateSchema,CM-0070,,4,263.2,T131,Tom Ellery,Understood.,0.94
+CM-0072_1,commTranscriptsDataPredicateSchema,CM-0072,,1,0.0,C3201,Ardent dealer,"Morning, any colour on Kestrel today?",0.85
+CM-0072_2,commTranscriptsDataPredicateSchema,CM-0072,,2,58.0,T130,Priya Nair,"Quiet so far, a bit of interest from the long-only side.",0.94
+CM-0072_3,commTranscriptsDataPredicateSchema,CM-0072,,3,116.0,C3201,Ardent dealer,"Okay, keep me posted.",0.9
+CM-0072_4,commTranscriptsDataPredicateSchema,CM-0072,,4,174.0,T130,Priya Nair,Will do.,0.85
+CM-0001_1,commTranscriptsDataPredicateSchema,CM-0001,E8,1,0.0,T104,Jordan Kerr,You at the desk in a few minutes?,0.96
+CM-0001_2,commTranscriptsDataPredicateSchema,CM-0001,E8,2,9.6,C3107,Fenwick dealer (unidentified),"Yeah, I'm here.",0.93
+CM-0001_3,commTranscriptsDataPredicateSchema,CM-0001,E8,3,19.2,T104,Jordan Kerr,"Have the Northgate order ready. Watch the bid, it'll firm up shortly.",0.95
+CM-0001_4,commTranscriptsDataPredicateSchema,CM-0001,E8,4,28.8,C3107,Fenwick dealer (unidentified),How much?,0.87
+CM-0001_5,commTranscriptsDataPredicateSchema,CM-0001,E8,5,38.4,T104,Jordan Kerr,Seventy-five. Don't hang about.,0.95
+CM-0073_1,commTranscriptsDataPredicateSchema,CM-0073,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Kestrel.,0.96
+CM-0073_2,commTranscriptsDataPredicateSchema,CM-0073,,2,37.3,T101,Alex Morrow,"Fine in normal size, thinner after four.",0.9
+CM-0073_3,commTranscriptsDataPredicateSchema,CM-0073,,3,74.7,SALES,Sales desk,I'll pass that on.,0.89
+CM-0077_1,commTranscriptsDataPredicateSchema,CM-0077,,1,0.0,T131,Tom Ellery,"Heads up, results from Kestrel on Thursday.",0.93
+CM-0077_2,commTranscriptsDataPredicateSchema,CM-0077,,2,111.0,C3200,Larchmont dealer,"Noted, we'll probably sit on our hands until then.",0.85
+CM-0077_3,commTranscriptsDataPredicateSchema,CM-0077,,3,222.0,T131,Tom Ellery,Makes sense.,0.94
+CM-0075_1,commTranscriptsDataPredicateSchema,CM-0075,,1,0.0,C3201,Ardent dealer,"Morning, any colour on Harbour Bank today?",0.88
+CM-0075_2,commTranscriptsDataPredicateSchema,CM-0075,,2,52.2,T101,Alex Morrow,"Quiet so far, a bit of interest from the long-only side.",0.87
+CM-0075_3,commTranscriptsDataPredicateSchema,CM-0075,,3,104.5,C3201,Ardent dealer,"Okay, keep me posted.",0.97
+CM-0075_4,commTranscriptsDataPredicateSchema,CM-0075,,4,156.8,T101,Alex Morrow,Will do.,0.93
+CM-0074_1,commTranscriptsDataPredicateSchema,CM-0074,,1,0.0,T120,Sam Okafor,"Your Kestrel order is done, I'll send the fills over.",0.9
+CM-0074_2,commTranscriptsDataPredicateSchema,CM-0074,,2,40.0,C3200,Larchmont dealer,"Thanks, what was the average?",0.93
+CM-0074_3,commTranscriptsDataPredicateSchema,CM-0074,,3,80.0,T120,Sam Okafor,"Close to the VWAP, details on the confirm.",0.88
+CM-0074_4,commTranscriptsDataPredicateSchema,CM-0074,,4,120.0,C3200,Larchmont dealer,"Great, cheers.",0.95
+CM-0076_1,commTranscriptsDataPredicateSchema,CM-0076,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.84
+CM-0076_2,commTranscriptsDataPredicateSchema,CM-0076,,2,105.7,T131,Tom Ellery,"Small buyer of Northgate, nothing else.",0.94
+CM-0076_3,commTranscriptsDataPredicateSchema,CM-0076,,3,211.3,SALES,Sales desk,Got it.,0.92
+CM-0079_1,commTranscriptsDataPredicateSchema,CM-0079,,1,0.0,T101,Alex Morrow,"Your Britwell order is done, I'll send the fills over.",0.91
+CM-0079_2,commTranscriptsDataPredicateSchema,CM-0079,,2,91.8,C3200,Larchmont dealer,"Thanks, what was the average?",0.97
+CM-0079_3,commTranscriptsDataPredicateSchema,CM-0079,,3,183.5,T101,Alex Morrow,"Close to the VWAP, details on the confirm.",0.85
+CM-0079_4,commTranscriptsDataPredicateSchema,CM-0079,,4,275.2,C3200,Larchmont dealer,"Great, cheers.",0.95
+CM-0080_1,commTranscriptsDataPredicateSchema,CM-0080,,1,0.0,RISK,Risk desk,You're close to the Severn Mining concentration limit.,0.92
+CM-0080_2,commTranscriptsDataPredicateSchema,CM-0080,,2,75.0,T130,Priya Nair,"Aware, I'll trim into the close.",0.96
+CM-0080_3,commTranscriptsDataPredicateSchema,CM-0080,,3,150.0,RISK,Risk desk,Let me know when it's done.,0.98
+CM-0078_1,commTranscriptsDataPredicateSchema,CM-0078,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.98
+CM-0078_2,commTranscriptsDataPredicateSchema,CM-0078,,2,124.0,T131,Tom Ellery,"Small buyer of Harbour Bank, nothing else.",0.89
+CM-0078_3,commTranscriptsDataPredicateSchema,CM-0078,,3,248.0,SALES,Sales desk,Got it.,0.96
+CM-0081_1,commTranscriptsDataPredicateSchema,CM-0081,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Severn Mining.,0.98
+CM-0081_2,commTranscriptsDataPredicateSchema,CM-0081,,2,22.3,T131,Tom Ellery,"Fine in normal size, thinner after four.",0.98
+CM-0081_3,commTranscriptsDataPredicateSchema,CM-0081,,3,44.7,SALES,Sales desk,I'll pass that on.,0.96
+CM-0002_1,commTranscriptsDataPredicateSchema,CM-0002,E9,1,0.0,T104,Jordan Kerr,Same as Wednesday. Couple of minutes.,0.86
+CM-0002_2,commTranscriptsDataPredicateSchema,CM-0002,E9,2,7.3,C3107,Fenwick dealer (unidentified),Northgate again?,0.93
+CM-0002_3,commTranscriptsDataPredicateSchema,CM-0002,E9,3,14.7,T104,Jordan Kerr,Yep.,0.96
+CM-0083_1,commTranscriptsDataPredicateSchema,CM-0083,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.85
+CM-0083_2,commTranscriptsDataPredicateSchema,CM-0083,,2,72.0,T130,Priya Nair,"Small buyer of Harbour Bank, nothing else.",0.93
+CM-0083_3,commTranscriptsDataPredicateSchema,CM-0083,,3,144.0,SALES,Sales desk,Got it.,0.89
+CM-0085_1,commTranscriptsDataPredicateSchema,CM-0085,,1,0.0,C3201,Ardent dealer,Can you work twenty thousand Britwell through the day?,0.87
+CM-0085_2,commTranscriptsDataPredicateSchema,CM-0085,,2,89.2,T130,Priya Nair,"Sure, VWAP to the close?",0.88
+CM-0085_3,commTranscriptsDataPredicateSchema,CM-0085,,3,178.5,C3201,Ardent dealer,"Yes please, nothing aggressive.",0.9
+CM-0085_4,commTranscriptsDataPredicateSchema,CM-0085,,4,267.8,T130,Priya Nair,Understood.,0.86
+CM-0003_1,commTranscriptsDataPredicateSchema,CM-0003,E10,1,0.0,T104,Jordan Kerr,"Morning. Usual one, give it a couple of minutes.",0.91
+CM-0003_2,commTranscriptsDataPredicateSchema,CM-0003,E10,2,10.0,C3107,Fenwick dealer (unidentified),Same size?,0.89
+CM-0003_3,commTranscriptsDataPredicateSchema,CM-0003,E10,3,20.0,T104,Jordan Kerr,Same size. Wait for the bid to move.,0.97
+CM-0084_1,commTranscriptsDataPredicateSchema,CM-0084,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.84
+CM-0084_2,commTranscriptsDataPredicateSchema,CM-0084,,2,85.0,T120,Sam Okafor,"Small buyer of Harbour Bank, nothing else.",0.96
+CM-0084_3,commTranscriptsDataPredicateSchema,CM-0084,,3,170.0,SALES,Sales desk,Got it.,0.87
+CM-0082_1,commTranscriptsDataPredicateSchema,CM-0082,,1,0.0,RISK,Risk desk,Can you confirm your end-of-day delta?,0.89
+CM-0082_2,commTranscriptsDataPredicateSchema,CM-0082,,2,99.7,T120,Sam Okafor,"Sending it over now, flat on the index.",0.85
+CM-0082_3,commTranscriptsDataPredicateSchema,CM-0082,,3,199.3,RISK,Risk desk,Thanks.,0.88
+CM-0088_1,commTranscriptsDataPredicateSchema,CM-0088,,1,0.0,T120,Sam Okafor,"Your Harbour Bank order is done, I'll send the fills over.",0.91
+CM-0088_2,commTranscriptsDataPredicateSchema,CM-0088,,2,28.0,C3201,Ardent dealer,"Thanks, what was the average?",0.84
+CM-0088_3,commTranscriptsDataPredicateSchema,CM-0088,,3,56.0,T120,Sam Okafor,"Close to the VWAP, details on the confirm.",0.88
+CM-0088_4,commTranscriptsDataPredicateSchema,CM-0088,,4,84.0,C3201,Ardent dealer,"Great, cheers.",0.85
+CM-0087_1,commTranscriptsDataPredicateSchema,CM-0087,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.85
+CM-0087_2,commTranscriptsDataPredicateSchema,CM-0087,,2,109.0,T131,Tom Ellery,"Small buyer of Britwell, nothing else.",0.84
+CM-0087_3,commTranscriptsDataPredicateSchema,CM-0087,,3,218.0,SALES,Sales desk,Got it.,0.88
+CM-0089_1,commTranscriptsDataPredicateSchema,CM-0089,,1,0.0,T131,Tom Ellery,"Your Northgate order is done, I'll send the fills over.",0.92
+CM-0089_2,commTranscriptsDataPredicateSchema,CM-0089,,2,38.5,C3200,Larchmont dealer,"Thanks, what was the average?",0.91
+CM-0089_3,commTranscriptsDataPredicateSchema,CM-0089,,3,77.0,T131,Tom Ellery,"Close to the VWAP, details on the confirm.",0.95
+CM-0089_4,commTranscriptsDataPredicateSchema,CM-0089,,4,115.5,C3200,Larchmont dealer,"Great, cheers.",0.93
+CM-0086_1,commTranscriptsDataPredicateSchema,CM-0086,,1,0.0,RISK,Risk desk,You're close to the Kestrel concentration limit.,0.94
+CM-0086_2,commTranscriptsDataPredicateSchema,CM-0086,,2,91.0,T120,Sam Okafor,"Aware, I'll trim into the close.",0.91
+CM-0086_3,commTranscriptsDataPredicateSchema,CM-0086,,3,182.0,RISK,Risk desk,Let me know when it's done.,0.88
+CM-0091_1,commTranscriptsDataPredicateSchema,CM-0091,,1,0.0,RISK,Risk desk,Can you confirm your end-of-day delta?,0.96
+CM-0091_2,commTranscriptsDataPredicateSchema,CM-0091,,2,128.7,T104,Jordan Kerr,"Sending it over now, flat on the index.",0.94
+CM-0091_3,commTranscriptsDataPredicateSchema,CM-0091,,3,257.3,RISK,Risk desk,Thanks.,0.91
+CM-0090_1,commTranscriptsDataPredicateSchema,CM-0090,,1,0.0,SALES,Sales desk,Any axes to show this afternoon?,0.86
+CM-0090_2,commTranscriptsDataPredicateSchema,CM-0090,,2,93.0,T120,Sam Okafor,"Small buyer of Britwell, nothing else.",0.91
+CM-0090_3,commTranscriptsDataPredicateSchema,CM-0090,,3,186.0,SALES,Sales desk,Got it.,0.91
+CM-0092_1,commTranscriptsDataPredicateSchema,CM-0092,,1,0.0,C3201,Ardent dealer,"Morning, any colour on Britwell today?",0.95
+CM-0092_2,commTranscriptsDataPredicateSchema,CM-0092,,2,97.5,T101,Alex Morrow,"Quiet so far, a bit of interest from the long-only side.",0.94
+CM-0092_3,commTranscriptsDataPredicateSchema,CM-0092,,3,195.0,C3201,Ardent dealer,"Okay, keep me posted.",0.97
+CM-0092_4,commTranscriptsDataPredicateSchema,CM-0092,,4,292.5,T101,Alex Morrow,Will do.,0.93
+CM-0093_1,commTranscriptsDataPredicateSchema,CM-0093,,1,0.0,SALES,Sales desk,Client is asking about liquidity in Northgate.,0.85
+CM-0093_2,commTranscriptsDataPredicateSchema,CM-0093,,2,118.0,T101,Alex Morrow,"Fine in normal size, thinner after four.",0.93
+CM-0093_3,commTranscriptsDataPredicateSchema,CM-0093,,3,236.0,SALES,Sales desk,I'll pass that on.,0.97
+CM-0004_1,commTranscriptsDataPredicateSchema,CM-0004,E11,1,0.0,T104,Jordan Kerr,Different one today. Kestrel. It's in the index now.,0.9
+CM-0004_2,commTranscriptsDataPredicateSchema,CM-0004,E11,2,12.3,C3107,Fenwick dealer (unidentified),Ninety?,0.91
+CM-0004_3,commTranscriptsDataPredicateSchema,CM-0004,E11,3,24.7,T104,Jordan Kerr,Ninety. Go when you see it lift.,0.87
+CM-0097_1,commTranscriptsDataPredicateSchema,CM-0097,,1,0.0,C3201,Ardent dealer,"Morning, any colour on Britwell today?",0.94
+CM-0097_2,commTranscriptsDataPredicateSchema,CM-0097,,2,46.2,T120,Sam Okafor,"Quiet so far, a bit of interest from the long-only side.",0.91
+CM-0097_3,commTranscriptsDataPredicateSchema,CM-0097,,3,92.5,C3201,Ardent dealer,"Okay, keep me posted.",0.84
+CM-0097_4,commTranscriptsDataPredicateSchema,CM-0097,,4,138.8,T120,Sam Okafor,Will do.,0.95
+CM-0096_1,commTranscriptsDataPredicateSchema,CM-0096,,1,0.0,C3200,Larchmont dealer,"Morning, any colour on Britwell today?",0.85
+CM-0096_2,commTranscriptsDataPredicateSchema,CM-0096,,2,54.8,T130,Priya Nair,"Quiet so far, a bit of interest from the long-only side.",0.94
+CM-0096_3,commTranscriptsDataPredicateSchema,CM-0096,,3,109.5,C3200,Larchmont dealer,"Okay, keep me posted.",0.88
+CM-0096_4,commTranscriptsDataPredicateSchema,CM-0096,,4,164.2,T130,Priya Nair,Will do.,0.85
+CM-0094_1,commTranscriptsDataPredicateSchema,CM-0094,,1,0.0,C3200,Larchmont dealer,Can you work twenty thousand Harbour Bank through the day?,0.94
+CM-0094_2,commTranscriptsDataPredicateSchema,CM-0094,,2,44.2,T120,Sam Okafor,"Sure, VWAP to the close?",0.87
+CM-0094_3,commTranscriptsDataPredicateSchema,CM-0094,,3,88.5,C3200,Larchmont dealer,"Yes please, nothing aggressive.",0.94
+CM-0094_4,commTranscriptsDataPredicateSchema,CM-0094,,4,132.8,T120,Sam Okafor,Understood.,0.98
+CM-0095_1,commTranscriptsDataPredicateSchema,CM-0095,,1,0.0,T131,Tom Ellery,"Heads up, results from Severn Mining on Thursday.",0.85
+CM-0095_2,commTranscriptsDataPredicateSchema,CM-0095,,2,62.0,C3200,Larchmont dealer,"Noted, we'll probably sit on our hands until then.",0.97
+CM-0095_3,commTranscriptsDataPredicateSchema,CM-0095,,3,124.0,T131,Tom Ellery,Makes sense.,0.88
+CM-0100_1,commTranscriptsDataPredicateSchema,CM-0100,,1,0.0,C3201,Ardent dealer,"Morning, any colour on Britwell today?",0.93
+CM-0100_2,commTranscriptsDataPredicateSchema,CM-0100,,2,38.5,T120,Sam Okafor,"Quiet so far, a bit of interest from the long-only side.",0.87
+CM-0100_3,commTranscriptsDataPredicateSchema,CM-0100,,3,77.0,C3201,Ardent dealer,"Okay, keep me posted.",0.92
+CM-0100_4,commTranscriptsDataPredicateSchema,CM-0100,,4,115.5,T120,Sam Okafor,Will do.,0.89
+CM-0005_1,commTranscriptsDataPredicateSchema,CM-0005,E12,1,0.0,T104,Jordan Kerr,"Kestrel again, shortly.",0.93
+CM-0005_2,commTranscriptsDataPredicateSchema,CM-0005,E12,2,8.3,C3107,Fenwick dealer (unidentified),Ninety?,0.94
+CM-0005_3,commTranscriptsDataPredicateSchema,CM-0005,E12,3,16.7,T104,Jordan Kerr,Ninety. Same as Wednesday.,0.93
+CM-0098_1,commTranscriptsDataPredicateSchema,CM-0098,,1,0.0,T101,Alex Morrow,"Your Northgate order is done, I'll send the fills over.",0.91
+CM-0098_2,commTranscriptsDataPredicateSchema,CM-0098,,2,79.8,C3201,Ardent dealer,"Thanks, what was the average?",0.91
+CM-0098_3,commTranscriptsDataPredicateSchema,CM-0098,,3,159.5,T101,Alex Morrow,"Close to the VWAP, details on the confirm.",0.98
+CM-0098_4,commTranscriptsDataPredicateSchema,CM-0098,,4,239.2,C3201,Ardent dealer,"Great, cheers.",0.85
+CM-0101_1,commTranscriptsDataPredicateSchema,CM-0101,,1,0.0,RISK,Risk desk,Can you confirm your end-of-day delta?,0.88
+CM-0101_2,commTranscriptsDataPredicateSchema,CM-0101,,2,48.3,T131,Tom Ellery,"Sending it over now, flat on the index.",0.91
+CM-0101_3,commTranscriptsDataPredicateSchema,CM-0101,,3,96.7,RISK,Risk desk,Thanks.,0.91
+CM-0099_1,commTranscriptsDataPredicateSchema,CM-0099,,1,0.0,T120,Sam Okafor,"Heads up, results from Northgate on Thursday.",0.98
+CM-0099_2,commTranscriptsDataPredicateSchema,CM-0099,,2,40.3,C3200,Larchmont dealer,"Noted, we'll probably sit on our hands until then.",0.92
+CM-0099_3,commTranscriptsDataPredicateSchema,CM-0099,,3,80.7,T120,Sam Okafor,Makes sense.,0.88

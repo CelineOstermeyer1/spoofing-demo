@@ -1,0 +1,6 @@
+.env
+.venv/
+__pycache__/
+.claude/
+ingest_scale/
+detection_run.pkl

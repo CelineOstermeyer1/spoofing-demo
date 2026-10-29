@@ -1,0 +1,13 @@
+rel_id,from_instrument,to_instrument,rel_type,weight,valid_from,valid_to,provenance,source,confidence,notes
+IR-001,NGEZ6,NGE,UNDERLYING,,2026-03-20,,Declared,Exchange reference data,1.0,
+IR-002,ALBZ6,ALB100,UNDERLYING,,2026-03-20,,Declared,Exchange reference data,1.0,
+IR-003,NGE,ALB100,CONSTITUENT_OF,0.082,2025-06-23,,Declared,Index provider constituent file,1.0,Weight as of latest review
+IR-004,HRB,ALB100,CONSTITUENT_OF,0.064,2025-06-23,,Declared,Index provider constituent file,1.0,
+IR-005,SVM,ALB100,CONSTITUENT_OF,0.048,2025-06-23,,Declared,Index provider constituent file,1.0,
+IR-006,BRT,ALB100,CONSTITUENT_OF,0.039,2025-06-23,,Declared,Index provider constituent file,1.0,
+IR-007,DWR,ALB100,CONSTITUENT_OF,0.021,2025-06-23,2026-09-18,Declared,Index provider constituent file,1.0,Removed at September 2026 quarterly review
+IR-008,KPL,ALB100,CONSTITUENT_OF,0.051,2026-09-21,,Declared,Index provider constituent file,1.0,Added at September 2026 quarterly review; NOT a constituent before 21 Sep
+IR-009,NGEZ6,NGE,CROSS_IMPACT,,2026-01-02,,Inferred,Lead-lag model on order book history,0.94,Future book pressure leads stock by ~0.4s
+IR-010,ALBZ6,NGE,CROSS_IMPACT,,2026-01-02,,Inferred,Lead-lag model on order book history,0.81,Index future leads constituent by ~0.5s
+IR-011,ALBZ6,HRB,CROSS_IMPACT,,2026-01-02,,Inferred,Lead-lag model on order book history,0.77,
+IR-012,ALBZ6,KPL,CROSS_IMPACT,,2026-09-21,,Inferred,Lead-lag model on order book history,0.72,Only measurable after index inclusion

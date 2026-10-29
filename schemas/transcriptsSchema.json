@@ -1,0 +1,147 @@
+{
+  "name": "transcriptsSchema",
+  "version": 0,
+  "fields": [
+    {
+      "id": {
+        "columnName": "subject"
+      },
+      "dataType": {
+        "dataType": "TUPLESTRING"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "comm_id"
+      },
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "evidence_ref"
+      },
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "line_no"
+      },
+      "dataType": {
+        "dataType": "INTEGER",
+        "indexParameters": {
+          "anchor": 0,
+          "range": 0,
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "offset_s"
+      },
+      "dataType": {
+        "dataType": "DOUBLE",
+        "indexParameters": {
+          "anchor": 0,
+          "range": 0,
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "speaker_id"
+      },
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "speaker_name"
+      },
+      "dataType": {
+        "dataType": "TEXT"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "text"
+      },
+      "dataType": {
+        "dataType": "TEXT"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "stt_confidence"
+      },
+      "dataType": {
+        "dataType": "DOUBLE",
+        "indexParameters": {
+          "anchor": 0,
+          "range": 0,
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    }
+  ]
+}

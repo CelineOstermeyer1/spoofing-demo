@@ -1,0 +1,96 @@
+{
+  "name": "accountsSchema",
+  "version": 0,
+  "fields": [
+    {
+      "id": {
+        "columnName": "subject"
+      },
+      "dataType": {
+        "dataType": "TUPLESTRING"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "account_id"
+      },
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "account_name"
+      },
+      "dataType": {
+        "dataType": "TEXT"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "account_type"
+      },
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "responsible_trader"
+      },
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "client_id"
+      },
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    }
+  ]
+}

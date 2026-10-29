@@ -1,0 +1,133 @@
+{
+  "name": "accountsDataPIX",
+  "predicates": [
+    {
+      "name": "accountsDataPredicateSchema ",
+      "schema": {
+        "name": "accountsSchema",
+        "version": 1,
+        "fields": [
+          {
+            "id": {
+              "columnName": "subject"
+            },
+            "dataType": {
+              "dataType": "TUPLESTRING"
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          },
+          {
+            "id": {
+              "columnName": "account_id"
+            },
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          },
+          {
+            "id": {
+              "columnName": "account_name"
+            },
+            "dataType": {
+              "dataType": "TEXT"
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          },
+          {
+            "id": {
+              "columnName": "account_type"
+            },
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          },
+          {
+            "id": {
+              "columnName": "responsible_trader"
+            },
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          },
+          {
+            "id": {
+              "columnName": "client_id"
+            },
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "fields": {
+    "subject": {
+      "name": "subject",
+      "columnIndex": 1,
+      "dataType": {
+        "dataType": "TUPLESTRING"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      },
+      "notNullConstraint": false,
+      "objectConstraint": false,
+      "objectDataConstraint": false,
+      "predicateConstraint": false,
+      "primaryKeyConstraint": true,
+      "signatureConstraint": false,
+      "transactionBufferConstraint": false,
+      "uniqueConstraint": false,
+      "key1SegmentDepth": 17,
+      "key2SegmentDepth": 13,
+      "key3SegmentDepth": 13
+    }
+  },
+  "key1SegmentInfo": 17,
+  "key2SegmentInfo": 13,
+  "key3SegmentInfo": 13,
+  "version": 1
+}

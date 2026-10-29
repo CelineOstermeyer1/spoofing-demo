@@ -1,0 +1,10 @@
+instrument_id,name,asset_class,venue,price_unit,tick_size,contract_multiplier,underlying_id,expiry
+NGE,Northgate Energy plc,Equity,XALB,GBX,0.5,1,,
+HRB,Harbour Bank plc,Equity,XALB,GBX,0.5,1,,
+KPL,Kestrel Pharma plc,Equity,XALB,GBX,0.5,1,,
+SVM,Severn Mining plc,Equity,XALB,GBX,0.5,1,,
+BRT,Britwell Telecom plc,Equity,XALB,GBX,0.25,1,,
+DWR,Dunmore Retail plc,Equity,XALB,GBX,0.25,1,,
+ALB100,Albion 100 Index,Index,,Points,0.01,1,,
+NGEZ6,Northgate Energy single stock future Dec-26,Future,XALF,GBX,0.5,1000,NGE,2026-12-18
+ALBZ6,Albion 100 index future Dec-26,Future,XALF,Points,0.5,10,ALB100,2026-12-18

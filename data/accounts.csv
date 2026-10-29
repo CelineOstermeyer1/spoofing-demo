@@ -1,0 +1,9 @@
+account_id,account_name,account_type,responsible_trader,client_id
+ACC-1001,Prop book EQD-01,Proprietary,T101,
+ACC-2004,Prop book EQD-04,Proprietary,T104,
+ACC-1020,Index arbitrage book IA-01,Proprietary,T120,
+ACC-1030,Cash equities facilitation,Proprietary,T130,
+ACC-1031,Cash equities facilitation 2,Proprietary,T131,
+ACC-3107,Fenwick Capital DMA,Client,,C3107
+ACC-3200,Larchmont main,Client,,C3200
+ACC-3201,Ardent equities,Client,,C3201

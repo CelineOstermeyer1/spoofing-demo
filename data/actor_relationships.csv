@@ -1,0 +1,15 @@
+rel_id,from_actor,to_actor,rel_type,valid_from,valid_to,provenance,source,confidence,notes
+AR-001,T101,ACC-1001,TRADES_FOR,2024-02-01,,Declared,Entitlements system,1.0,
+AR-002,T104,ACC-2004,TRADES_FOR,2023-07-10,,Declared,Entitlements system,1.0,
+AR-003,T120,ACC-1020,TRADES_FOR,2022-11-01,,Declared,Entitlements system,1.0,
+AR-004,T130,ACC-1030,TRADES_FOR,2021-05-04,,Declared,Entitlements system,1.0,
+AR-005,T131,ACC-1031,TRADES_FOR,2025-01-13,,Declared,Entitlements system,1.0,
+AR-006,C3107,ACC-3107,OWNS,2025-11-03,,Declared,Client onboarding / KYC,1.0,
+AR-007,C3200,ACC-3200,OWNS,2020-01-15,,Declared,Client onboarding / KYC,1.0,
+AR-008,C3201,ACC-3201,OWNS,2019-08-20,,Declared,Client onboarding / KYC,1.0,
+AR-009,BO551,C3107,BENEFICIAL_OWNER_OF,2025-11-03,,Declared,Client onboarding / KYC,1.0,75% shareholding
+AR-010,BO560,C3200,BENEFICIAL_OWNER_OF,2020-01-15,,Declared,Client onboarding / KYC,1.0,
+AR-011,T104,BO551,SHARED_RESIDENTIAL_ADDRESS,2025-11-03,,Declared,HR record matched to KYC address,0.98,Same address on HR file and Fenwick UBO KYC; not disclosed as a connected party
+AR-012,T104,C3107,COMMUNICATES_WITH,2026-10-07,,Declared,Recorded work mobile metadata,1.0,Calls to Fenwick dealing line before each episode
+AR-013,ACC-2004,ACC-3107,COMPLEMENTARY_TRADING,2026-10-07,,Inferred,Co-occurrence model: cancelled futures pressure followed by opposite-side cash fill,0.91,5 co-occurrences in 8 trading days; baseline expectation <0.2
+AR-014,T120,T130,SAME_FLOOR,2022-11-01,,Declared,HR / desk mapping,1.0,Benign link included as noise

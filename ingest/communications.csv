@@ -1,0 +1,102 @@
+subject,predicate,comm_id,timestamp_utc,channel,from_party,to_party,to_party_id,duration_s
+CM-0006,commsRefPredicateSchema,CM-0006,2026-09-15T08:24:04.000000Z,Recorded work mobile,T130,Internal: Risk,,346
+CM-0007,commsRefPredicateSchema,CM-0007,2026-09-15T10:23:03.000000Z,Approved chat,T131,Internal: Sales,,381
+CM-0008,commsRefPredicateSchema,CM-0008,2026-09-15T11:53:34.000000Z,Recorded work mobile,T104,C3200 dealing line,C3200,58
+CM-0009,commsRefPredicateSchema,CM-0009,2026-09-15T16:02:17.000000Z,Recorded landline,T131,C3200 dealing line,C3200,318
+CM-0010,commsRefPredicateSchema,CM-0010,2026-09-16T08:46:45.000000Z,Recorded landline,T131,Internal: Sales,,304
+CM-0013,commsRefPredicateSchema,CM-0013,2026-09-16T10:01:01.000000Z,Recorded landline,T101,C3201 dealing line,C3201,359
+CM-0012,commsRefPredicateSchema,CM-0012,2026-09-16T12:28:03.000000Z,Recorded work mobile,T101,C3200 dealing line,C3200,170
+CM-0011,commsRefPredicateSchema,CM-0011,2026-09-16T14:54:03.000000Z,Approved chat,T131,Internal: Sales,,384
+CM-0015,commsRefPredicateSchema,CM-0015,2026-09-17T08:58:14.000000Z,Approved chat,T131,Internal: Sales,,203
+CM-0017,commsRefPredicateSchema,CM-0017,2026-09-17T11:36:09.000000Z,Approved chat,T120,C3200 dealing line,C3200,371
+CM-0016,commsRefPredicateSchema,CM-0016,2026-09-17T13:13:55.000000Z,Recorded work mobile,T120,Internal: Risk,,357
+CM-0014,commsRefPredicateSchema,CM-0014,2026-09-17T15:41:38.000000Z,Recorded landline,T120,C3201 dealing line,C3201,267
+CM-0021,commsRefPredicateSchema,CM-0021,2026-09-18T09:02:16.000000Z,Recorded landline,T104,C3201 dealing line,C3201,199
+CM-0018,commsRefPredicateSchema,CM-0018,2026-09-18T10:12:52.000000Z,Approved chat,T101,Internal: Sales,,60
+CM-0019,commsRefPredicateSchema,CM-0019,2026-09-18T11:36:08.000000Z,Recorded work mobile,T120,Internal: Risk,,190
+CM-0020,commsRefPredicateSchema,CM-0020,2026-09-18T15:05:30.000000Z,Approved chat,T131,C3200 dealing line,C3200,344
+CM-0022,commsRefPredicateSchema,CM-0022,2026-09-21T10:51:41.000000Z,Recorded work mobile,T120,C3201 dealing line,C3201,33
+CM-0025,commsRefPredicateSchema,CM-0025,2026-09-21T14:24:29.000000Z,Approved chat,T101,C3201 dealing line,C3201,166
+CM-0023,commsRefPredicateSchema,CM-0023,2026-09-21T14:41:46.000000Z,Approved chat,T131,Internal: Sales,,218
+CM-0024,commsRefPredicateSchema,CM-0024,2026-09-21T16:18:54.000000Z,Recorded landline,T104,C3200 dealing line,C3200,153
+CM-0026,commsRefPredicateSchema,CM-0026,2026-09-22T08:19:50.000000Z,Recorded work mobile,T101,Internal: Sales,,168
+CM-0028,commsRefPredicateSchema,CM-0028,2026-09-22T13:29:11.000000Z,Recorded landline,T130,Internal: Risk,,252
+CM-0029,commsRefPredicateSchema,CM-0029,2026-09-22T13:50:14.000000Z,Recorded work mobile,T104,Internal: Sales,,278
+CM-0027,commsRefPredicateSchema,CM-0027,2026-09-22T15:58:49.000000Z,Recorded landline,T130,C3200 dealing line,C3200,310
+CM-0033,commsRefPredicateSchema,CM-0033,2026-09-23T08:05:09.000000Z,Recorded landline,T131,C3200 dealing line,C3200,242
+CM-0032,commsRefPredicateSchema,CM-0032,2026-09-23T11:27:07.000000Z,Recorded work mobile,T101,Internal: Sales,,346
+CM-0030,commsRefPredicateSchema,CM-0030,2026-09-23T13:08:33.000000Z,Recorded landline,T131,C3201 dealing line,C3201,370
+CM-0031,commsRefPredicateSchema,CM-0031,2026-09-23T15:32:13.000000Z,Recorded work mobile,T130,C3200 dealing line,C3200,227
+CM-0035,commsRefPredicateSchema,CM-0035,2026-09-24T10:23:31.000000Z,Recorded landline,T120,C3200 dealing line,C3200,80
+CM-0037,commsRefPredicateSchema,CM-0037,2026-09-24T14:16:21.000000Z,Recorded work mobile,T120,Internal: Sales,,335
+CM-0034,commsRefPredicateSchema,CM-0034,2026-09-24T14:41:56.000000Z,Recorded work mobile,T131,Internal: Risk,,250
+CM-0036,commsRefPredicateSchema,CM-0036,2026-09-24T15:03:35.000000Z,Approved chat,T131,C3201 dealing line,C3201,321
+CM-0041,commsRefPredicateSchema,CM-0041,2026-09-25T08:34:00.000000Z,Recorded work mobile,T101,C3201 dealing line,C3201,169
+CM-0039,commsRefPredicateSchema,CM-0039,2026-09-25T12:10:22.000000Z,Approved chat,T130,C3200 dealing line,C3200,88
+CM-0040,commsRefPredicateSchema,CM-0040,2026-09-25T13:48:00.000000Z,Approved chat,T101,C3200 dealing line,C3200,310
+CM-0038,commsRefPredicateSchema,CM-0038,2026-09-25T16:10:02.000000Z,Approved chat,T104,Internal: Sales,,210
+CM-0045,commsRefPredicateSchema,CM-0045,2026-09-28T08:18:57.000000Z,Recorded work mobile,T104,C3201 dealing line,C3201,249
+CM-0042,commsRefPredicateSchema,CM-0042,2026-09-28T10:04:15.000000Z,Recorded landline,T104,C3200 dealing line,C3200,287
+CM-0043,commsRefPredicateSchema,CM-0043,2026-09-28T11:48:37.000000Z,Approved chat,T104,Internal: Sales,,140
+CM-0044,commsRefPredicateSchema,CM-0044,2026-09-28T12:20:06.000000Z,Recorded landline,T120,C3200 dealing line,C3200,385
+CM-0046,commsRefPredicateSchema,CM-0046,2026-09-29T09:02:15.000000Z,Recorded work mobile,T130,Internal: Sales,,331
+CM-0047,commsRefPredicateSchema,CM-0047,2026-09-29T09:49:05.000000Z,Recorded landline,T120,C3201 dealing line,C3201,380
+CM-0048,commsRefPredicateSchema,CM-0048,2026-09-29T11:43:46.000000Z,Recorded work mobile,T120,C3201 dealing line,C3201,300
+CM-0049,commsRefPredicateSchema,CM-0049,2026-09-29T12:31:04.000000Z,Recorded landline,T131,Internal: Sales,,140
+CM-0053,commsRefPredicateSchema,CM-0053,2026-09-30T08:52:24.000000Z,Approved chat,T131,C3200 dealing line,C3200,53
+CM-0050,commsRefPredicateSchema,CM-0050,2026-09-30T10:20:07.000000Z,Recorded work mobile,T104,Internal: Risk,,284
+CM-0052,commsRefPredicateSchema,CM-0052,2026-09-30T10:41:53.000000Z,Approved chat,T131,Internal: Risk,,62
+CM-0051,commsRefPredicateSchema,CM-0051,2026-09-30T15:28:58.000000Z,Recorded landline,T120,Internal: Sales,,42
+CM-0054,commsRefPredicateSchema,CM-0054,2026-10-01T10:22:42.000000Z,Approved chat,T104,Internal: Sales,,207
+CM-0056,commsRefPredicateSchema,CM-0056,2026-10-01T13:01:31.000000Z,Recorded work mobile,T104,Internal: Sales,,209
+CM-0057,commsRefPredicateSchema,CM-0057,2026-10-01T13:05:20.000000Z,Recorded landline,T104,Internal: Sales,,177
+CM-0055,commsRefPredicateSchema,CM-0055,2026-10-01T13:34:10.000000Z,Recorded work mobile,T120,Internal: Sales,,231
+CM-0061,commsRefPredicateSchema,CM-0061,2026-10-02T11:19:45.000000Z,Recorded work mobile,T101,Internal: Risk,,175
+CM-0060,commsRefPredicateSchema,CM-0060,2026-10-02T12:54:43.000000Z,Recorded landline,T131,C3200 dealing line,C3200,177
+CM-0058,commsRefPredicateSchema,CM-0058,2026-10-02T13:47:15.000000Z,Approved chat,T104,Internal: Sales,,347
+CM-0059,commsRefPredicateSchema,CM-0059,2026-10-02T13:49:16.000000Z,Recorded landline,T104,Internal: Risk,,266
+CM-0065,commsRefPredicateSchema,CM-0065,2026-10-05T10:54:23.000000Z,Recorded landline,T104,C3201 dealing line,C3201,277
+CM-0062,commsRefPredicateSchema,CM-0062,2026-10-05T11:02:37.000000Z,Recorded landline,T120,Internal: Sales,,81
+CM-0064,commsRefPredicateSchema,CM-0064,2026-10-05T11:28:53.000000Z,Approved chat,T130,Internal: Risk,,41
+CM-0063,commsRefPredicateSchema,CM-0063,2026-10-05T15:55:01.000000Z,Approved chat,T131,C3200 dealing line,C3200,343
+CM-0067,commsRefPredicateSchema,CM-0067,2026-10-06T08:26:46.000000Z,Recorded work mobile,T130,Internal: Sales,,102
+CM-0069,commsRefPredicateSchema,CM-0069,2026-10-06T11:16:42.000000Z,Recorded landline,T130,C3200 dealing line,C3200,185
+CM-0068,commsRefPredicateSchema,CM-0068,2026-10-06T14:07:03.000000Z,Recorded landline,T120,C3201 dealing line,C3201,316
+CM-0066,commsRefPredicateSchema,CM-0066,2026-10-06T15:46:18.000000Z,Recorded landline,T130,Internal: Risk,,64
+CM-0071,commsRefPredicateSchema,CM-0071,2026-10-07T08:08:34.000000Z,Approved chat,T131,Internal: Sales,,243
+CM-0070,commsRefPredicateSchema,CM-0070,2026-10-07T09:08:33.000000Z,Recorded work mobile,T131,C3200 dealing line,C3200,351
+CM-0072,commsRefPredicateSchema,CM-0072,2026-10-07T09:14:09.000000Z,Approved chat,T130,C3201 dealing line,C3201,232
+CM-0001,commsRefPredicateSchema,CM-0001,2026-10-07T10:59:18.000000Z,Recorded work mobile,T104,C3107 dealing line,C3107,48
+CM-0073,commsRefPredicateSchema,CM-0073,2026-10-07T15:49:45.000000Z,Approved chat,T101,Internal: Sales,,112
+CM-0077,commsRefPredicateSchema,CM-0077,2026-10-08T08:22:13.000000Z,Approved chat,T131,C3200 dealing line,C3200,333
+CM-0075,commsRefPredicateSchema,CM-0075,2026-10-08T09:17:08.000000Z,Approved chat,T101,C3201 dealing line,C3201,209
+CM-0074,commsRefPredicateSchema,CM-0074,2026-10-08T09:34:43.000000Z,Recorded work mobile,T120,C3200 dealing line,C3200,160
+CM-0076,commsRefPredicateSchema,CM-0076,2026-10-08T13:02:14.000000Z,Recorded work mobile,T131,Internal: Sales,,317
+CM-0079,commsRefPredicateSchema,CM-0079,2026-10-09T09:01:20.000000Z,Recorded work mobile,T101,C3200 dealing line,C3200,367
+CM-0080,commsRefPredicateSchema,CM-0080,2026-10-09T13:00:53.000000Z,Recorded work mobile,T130,Internal: Risk,,225
+CM-0078,commsRefPredicateSchema,CM-0078,2026-10-09T13:13:19.000000Z,Recorded landline,T131,Internal: Sales,,372
+CM-0081,commsRefPredicateSchema,CM-0081,2026-10-09T13:37:14.000000Z,Recorded landline,T131,Internal: Sales,,67
+CM-0002,commsRefPredicateSchema,CM-0002,2026-10-09T14:27:53.000000Z,Recorded work mobile,T104,C3107 dealing line,C3107,22
+CM-0083,commsRefPredicateSchema,CM-0083,2026-10-12T08:09:39.000000Z,Recorded work mobile,T130,Internal: Sales,,216
+CM-0085,commsRefPredicateSchema,CM-0085,2026-10-12T08:19:39.000000Z,Approved chat,T130,C3201 dealing line,C3201,357
+CM-0003,commsRefPredicateSchema,CM-0003,2026-10-12T09:44:28.000000Z,Recorded work mobile,T104,C3107 dealing line,C3107,30
+CM-0084,commsRefPredicateSchema,CM-0084,2026-10-12T12:05:49.000000Z,Recorded landline,T120,Internal: Sales,,255
+CM-0082,commsRefPredicateSchema,CM-0082,2026-10-12T12:35:41.000000Z,Approved chat,T120,Internal: Risk,,299
+CM-0088,commsRefPredicateSchema,CM-0088,2026-10-13T09:57:43.000000Z,Recorded landline,T120,C3201 dealing line,C3201,112
+CM-0087,commsRefPredicateSchema,CM-0087,2026-10-13T11:28:39.000000Z,Recorded work mobile,T131,Internal: Sales,,327
+CM-0089,commsRefPredicateSchema,CM-0089,2026-10-13T11:43:06.000000Z,Recorded landline,T131,C3200 dealing line,C3200,154
+CM-0086,commsRefPredicateSchema,CM-0086,2026-10-13T15:50:43.000000Z,Approved chat,T120,Internal: Risk,,273
+CM-0091,commsRefPredicateSchema,CM-0091,2026-10-14T09:59:59.000000Z,Approved chat,T104,Internal: Risk,,386
+CM-0090,commsRefPredicateSchema,CM-0090,2026-10-14T12:16:16.000000Z,Recorded work mobile,T120,Internal: Sales,,279
+CM-0092,commsRefPredicateSchema,CM-0092,2026-10-14T13:58:47.000000Z,Recorded landline,T101,C3201 dealing line,C3201,390
+CM-0093,commsRefPredicateSchema,CM-0093,2026-10-14T14:28:30.000000Z,Approved chat,T101,Internal: Sales,,354
+CM-0004,commsRefPredicateSchema,CM-0004,2026-10-14T15:17:32.000000Z,Recorded work mobile,T104,C3107 dealing line,C3107,37
+CM-0097,commsRefPredicateSchema,CM-0097,2026-10-15T08:53:55.000000Z,Recorded landline,T120,C3201 dealing line,C3201,185
+CM-0096,commsRefPredicateSchema,CM-0096,2026-10-15T09:39:06.000000Z,Recorded landline,T130,C3200 dealing line,C3200,219
+CM-0094,commsRefPredicateSchema,CM-0094,2026-10-15T09:39:45.000000Z,Recorded work mobile,T120,C3200 dealing line,C3200,177
+CM-0095,commsRefPredicateSchema,CM-0095,2026-10-15T11:42:25.000000Z,Approved chat,T131,C3200 dealing line,C3200,186
+CM-0100,commsRefPredicateSchema,CM-0100,2026-10-16T09:48:02.000000Z,Recorded work mobile,T120,C3201 dealing line,C3201,154
+CM-0005,commsRefPredicateSchema,CM-0005,2026-10-16T10:03:08.000000Z,Recorded work mobile,T104,C3107 dealing line,C3107,25
+CM-0098,commsRefPredicateSchema,CM-0098,2026-10-16T10:38:41.000000Z,Approved chat,T101,C3201 dealing line,C3201,319
+CM-0101,commsRefPredicateSchema,CM-0101,2026-10-16T14:32:34.000000Z,Approved chat,T131,Internal: Risk,,145
+CM-0099,commsRefPredicateSchema,CM-0099,2026-10-16T16:18:27.000000Z,Recorded work mobile,T120,C3200 dealing line,C3200,121

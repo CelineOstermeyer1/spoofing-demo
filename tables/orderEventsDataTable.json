@@ -1,0 +1,684 @@
+{
+  "catalogName": "demoCatalog",
+  "namespaceName": "demoNamespace",
+  "name": "orderEventsDataTable",
+  "exportable": true,
+  "remote": false,
+  "securityLabel": {
+    "level": 101,
+    "compartment": 0,
+    "group": 0
+  },
+  "primaryIndex": {
+    "catalogName": "demoCatalog",
+    "namespaceName": "demoNamespace",
+    "tableName": "orderEventsDataTable",
+    "name": "orderEventsDataIndex",
+    "versions": [
+      {
+        "name": "orderEventsDataPIX",
+        "predicates": [
+          {
+            "name": "eventDataPredicateSchema",
+            "schema": {
+              "name": "orderEventsDataSchema",
+              "version": 1,
+              "fields": [
+                {
+                  "id": {
+                    "columnName": "event_id"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "order_id"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "timestamp_utc"
+                  },
+                  "dataType": {
+                    "dataType": "TIMESTAMP",
+                    "chronoPrecision": "MILLIS",
+                    "indexParameters": {
+                      "startDate": 1767225600000,
+                      "durationInUnits": 0,
+                      "units": "MILLIS",
+                      "hashSeed": 0
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "venue"
+                  },
+                  "dataType": {
+                    "dataType": "TEXT"
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "instrument_id"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "account_id"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "trader_id"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "side"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "order_type"
+                  },
+                  "dataType": {
+                    "dataType": "TEXT"
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "limit_price"
+                  },
+                  "dataType": {
+                    "dataType": "DOUBLE",
+                    "indexParameters": {
+                      "anchor": 0,
+                      "range": 0,
+                      "hashSeed": 0
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "order_qty"
+                  },
+                  "dataType": {
+                    "dataType": "INTEGER",
+                    "indexParameters": {
+                      "anchor": 0,
+                      "range": 0,
+                      "hashSeed": 0
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "event_type"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "fill_qty"
+                  },
+                  "dataType": {
+                    "dataType": "INTEGER",
+                    "indexParameters": {
+                      "anchor": 0,
+                      "range": 0,
+                      "hashSeed": 0
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "fill_price"
+                  },
+                  "dataType": {
+                    "dataType": "DOUBLE",
+                    "indexParameters": {
+                      "anchor": 0,
+                      "range": 0,
+                      "hashSeed": 0
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "remaining_qty"
+                  },
+                  "dataType": {
+                    "dataType": "INTEGER",
+                    "indexParameters": {
+                      "anchor": 0,
+                      "range": 0,
+                      "hashSeed": 0
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "fields": {
+          "event_id": {
+            "name": "event_id",
+            "columnIndex": 1,
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123,
+                "writeSize": 4,
+                "type": 4
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": true,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false,
+            "key1SegmentDepth": 7,
+            "key2SegmentDepth": 5,
+            "key3SegmentDepth": 5
+          },
+          "order_id": {
+            "name": "order_id",
+            "columnIndex": 2,
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123,
+                "writeSize": 4,
+                "type": 4
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": false,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false
+          },
+          "timestamp_utc": {
+            "name": "timestamp_utc",
+            "columnIndex": 3,
+            "dataType": {
+              "dataType": "TIMESTAMP",
+              "chronoPrecision": "MILLIS",
+              "indexParameters": {
+                "units": 14,
+                "hashSeed": 0,
+                "anchor": 1767225600000,
+                "durationInUnits": 0,
+                "writeSize": 24,
+                "type": 23
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": true,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false,
+            "key1SegmentDepth": 10,
+            "key2SegmentDepth": 8,
+            "key3SegmentDepth": 8
+          },
+          "venue": {
+            "name": "venue",
+            "columnIndex": 4,
+            "dataType": {
+              "dataType": "TEXT"
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": false,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false
+          },
+          "instrument_id": {
+            "name": "instrument_id",
+            "columnIndex": 5,
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123,
+                "writeSize": 4,
+                "type": 4
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": false,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false
+          },
+          "account_id": {
+            "name": "account_id",
+            "columnIndex": 6,
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123,
+                "writeSize": 4,
+                "type": 4
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": false,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false
+          },
+          "trader_id": {
+            "name": "trader_id",
+            "columnIndex": 7,
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123,
+                "writeSize": 4,
+                "type": 4
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": false,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false
+          },
+          "side": {
+            "name": "side",
+            "columnIndex": 8,
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123,
+                "writeSize": 4,
+                "type": 4
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": false,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false
+          },
+          "order_type": {
+            "name": "order_type",
+            "columnIndex": 9,
+            "dataType": {
+              "dataType": "TEXT"
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": false,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false
+          },
+          "limit_price": {
+            "name": "limit_price",
+            "columnIndex": 10,
+            "dataType": {
+              "dataType": "DOUBLE",
+              "indexParameters": {
+                "anchor": 0,
+                "range": 0,
+                "hashSeed": 0,
+                "writeSize": 12,
+                "type": 9
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": false,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false
+          },
+          "order_qty": {
+            "name": "order_qty",
+            "columnIndex": 11,
+            "dataType": {
+              "dataType": "INTEGER",
+              "indexParameters": {
+                "anchor": 0,
+                "range": 0,
+                "hashSeed": 0,
+                "writeSize": 16,
+                "type": 10
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": false,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false
+          },
+          "event_type": {
+            "name": "event_type",
+            "columnIndex": 12,
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123,
+                "writeSize": 4,
+                "type": 4
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": false,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false
+          },
+          "fill_qty": {
+            "name": "fill_qty",
+            "columnIndex": 13,
+            "dataType": {
+              "dataType": "INTEGER",
+              "indexParameters": {
+                "anchor": 0,
+                "range": 0,
+                "hashSeed": 0,
+                "writeSize": 16,
+                "type": 10
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": false,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false
+          },
+          "fill_price": {
+            "name": "fill_price",
+            "columnIndex": 14,
+            "dataType": {
+              "dataType": "DOUBLE",
+              "indexParameters": {
+                "anchor": 0,
+                "range": 0,
+                "hashSeed": 0,
+                "writeSize": 12,
+                "type": 9
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": false,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false
+          },
+          "remaining_qty": {
+            "name": "remaining_qty",
+            "columnIndex": 15,
+            "dataType": {
+              "dataType": "INTEGER",
+              "indexParameters": {
+                "anchor": 0,
+                "range": 0,
+                "hashSeed": 0,
+                "writeSize": 16,
+                "type": 10
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": false,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false
+          }
+        },
+        "key1SegmentInfo": 17,
+        "key2SegmentInfo": 13,
+        "key3SegmentInfo": 13,
+        "version": 1
+      }
+    ],
+    "indexType": "CLUSTERED_INDEX"
+  },
+  "secondaryIndexes": [],
+  "attributes": [
+    "BlackForestAppFrameworkUser",
+    "BlackForestCatalogUser",
+    "BlackForestIngestPipelineUser",
+    "BlackForestRootIdentityAuthority",
+    "BlackForestIdentityAuditor",
+    "d647a6fc-9c6f-4a07-b50e-08590622579f",
+    "BlackForestResourceManagerAdministrator"
+  ]
+}

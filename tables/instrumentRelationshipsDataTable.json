@@ -1,0 +1,274 @@
+{
+  "catalogName": "demoCatalog",
+  "namespaceName": "demoNamespace",
+  "name": "instrumentRelationshipsDataTable",
+  "exportable": true,
+  "remote": false,
+  "securityLabel": {
+    "level": 101,
+    "compartment": 0,
+    "group": 0
+  },
+  "primaryIndex": {
+    "catalogName": "demoCatalog",
+    "namespaceName": "demoNamespace",
+    "tableName": "instrumentRelationshipsDataTable",
+    "name": "instrumentRelationshipsDataIndex",
+    "versions": [
+      {
+        "name": "instrumentRelationshipsDataIndex",
+        "predicates": [
+          {
+            "name": "instrumentRelationshipsPredicateSchema",
+            "schema": {
+              "name": "instrumentRelationshipsSchema",
+              "version": 1,
+              "fields": [
+                {
+                  "id": {
+                    "columnName": "subject"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "rel_id"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "from_instrument"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "to_instrument"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "rel_type"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "weight"
+                  },
+                  "dataType": {
+                    "dataType": "DOUBLE",
+                    "indexParameters": {
+                      "anchor": 0,
+                      "range": 0,
+                      "hashSeed": 0
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "valid_from"
+                  },
+                  "dataType": {
+                    "dataType": "TIMESTAMP",
+                    "chronoPrecision": "MILLIS",
+                    "indexParameters": {
+                      "startDate": 1767225600000,
+                      "durationInUnits": 0,
+                      "units": "MILLIS",
+                      "hashSeed": 0
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "valid_to"
+                  },
+                  "dataType": {
+                    "dataType": "TIMESTAMP",
+                    "chronoPrecision": "MILLIS",
+                    "indexParameters": {
+                      "startDate": 1767225600000,
+                      "durationInUnits": 0,
+                      "units": "MILLIS",
+                      "hashSeed": 0
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "provenance"
+                  },
+                  "dataType": {
+                    "dataType": "TEXT"
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "source"
+                  },
+                  "dataType": {
+                    "dataType": "TEXT"
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "confidence"
+                  },
+                  "dataType": {
+                    "dataType": "DOUBLE",
+                    "indexParameters": {
+                      "anchor": 0,
+                      "range": 0,
+                      "hashSeed": 0
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "notes"
+                  },
+                  "dataType": {
+                    "dataType": "TEXT"
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "fields": {
+          "subject": {
+            "name": "subject",
+            "columnIndex": 1,
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123,
+                "writeSize": 4,
+                "type": 4
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": true,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false,
+            "key1SegmentDepth": 17,
+            "key2SegmentDepth": 13,
+            "key3SegmentDepth": 13
+          }
+        },
+        "key1SegmentInfo": 17,
+        "key2SegmentInfo": 13,
+        "key3SegmentInfo": 13,
+        "version": 1
+      }
+    ],
+    "indexType": "CLUSTERED_INDEX"
+  },
+  "secondaryIndexes": [],
+  "attributes": [
+    "BlackForestCatalogUser",
+    "BlackForestIngestPipelineUser",
+    "BlackForestRootIdentityAuthority",
+    "BlackForestAppFrameworkUser",
+    "d647a6fc-9c6f-4a07-b50e-08590622579f",
+    "BlackForestIdentityAuditor",
+    "BlackForestResourceManagerAdministrator"
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "name": "accessLogsDataPIX",
+  "predicates": [
+    {
+      "name": "accessLogsPredicateSchema",
+      "schema": {
+        "name": "accessLogsSchema",
+        "version": 1,
+        "fields": [
+          {
+            "id": {
+              "columnName": "log_id"
+            },
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          },
+          {
+            "id": {
+              "columnName": "timestamp_utc"
+            },
+            "dataType": {
+              "dataType": "TIMESTAMP",
+              "chronoPrecision": "MILLIS",
+              "indexParameters": {
+                "startDate": 1767225600000,
+                "durationInUnits": 0,
+                "units": "MILLIS",
+                "hashSeed": 0
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          },
+          {
+            "id": {
+              "columnName": "account_id"
+            },
+            "dataType": {
+              "dataType": "VARCHAR",
+              "indexParameters": {
+                "hashSeed": 425123
+              }
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          },
+          {
+            "id": {
+              "columnName": "event"
+            },
+            "dataType": {
+              "dataType": "TEXT"
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          },
+          {
+            "id": {
+              "columnName": "system"
+            },
+            "dataType": {
+              "dataType": "TEXT"
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          },
+          {
+            "id": {
+              "columnName": "source_ip"
+            },
+            "dataType": {
+              "dataType": "TEXT"
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "fields": {
+    "log_id": {
+      "name": "log_id",
+      "columnIndex": 1,
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 425123,
+          "writeSize": 4,
+          "type": 4
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      },
+      "notNullConstraint": false,
+      "objectConstraint": false,
+      "objectDataConstraint": false,
+      "predicateConstraint": false,
+      "primaryKeyConstraint": true,
+      "signatureConstraint": false,
+      "transactionBufferConstraint": false,
+      "uniqueConstraint": false,
+      "key1SegmentDepth": 7,
+      "key2SegmentDepth": 5,
+      "key3SegmentDepth": 5
+    },
+    "timestamp_utc": {
+      "name": "timestamp_utc",
+      "columnIndex": 2,
+      "dataType": {
+        "dataType": "TIMESTAMP",
+        "chronoPrecision": "MILLIS",
+        "indexParameters": {
+          "units": 14,
+          "hashSeed": 0,
+          "anchor": 1767225600000,
+          "durationInUnits": 0,
+          "writeSize": 24,
+          "type": 23
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      },
+      "notNullConstraint": false,
+      "objectConstraint": false,
+      "objectDataConstraint": false,
+      "predicateConstraint": false,
+      "primaryKeyConstraint": true,
+      "signatureConstraint": false,
+      "transactionBufferConstraint": false,
+      "uniqueConstraint": false,
+      "key1SegmentDepth": 10,
+      "key2SegmentDepth": 8,
+      "key3SegmentDepth": 8
+    },
+    "account_id": {
+      "name": "account_id",
+      "columnIndex": 3,
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 425123,
+          "writeSize": 4,
+          "type": 4
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      },
+      "notNullConstraint": false,
+      "objectConstraint": false,
+      "objectDataConstraint": false,
+      "predicateConstraint": false,
+      "primaryKeyConstraint": false,
+      "signatureConstraint": false,
+      "transactionBufferConstraint": false,
+      "uniqueConstraint": false
+    },
+    "event": {
+      "name": "event",
+      "columnIndex": 4,
+      "dataType": {
+        "dataType": "TEXT"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      },
+      "notNullConstraint": false,
+      "objectConstraint": false,
+      "objectDataConstraint": false,
+      "predicateConstraint": false,
+      "primaryKeyConstraint": false,
+      "signatureConstraint": false,
+      "transactionBufferConstraint": false,
+      "uniqueConstraint": false
+    },
+    "system": {
+      "name": "system",
+      "columnIndex": 5,
+      "dataType": {
+        "dataType": "TEXT"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      },
+      "notNullConstraint": false,
+      "objectConstraint": false,
+      "objectDataConstraint": false,
+      "predicateConstraint": false,
+      "primaryKeyConstraint": false,
+      "signatureConstraint": false,
+      "transactionBufferConstraint": false,
+      "uniqueConstraint": false
+    },
+    "source_ip": {
+      "name": "source_ip",
+      "columnIndex": 6,
+      "dataType": {
+        "dataType": "TEXT"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      },
+      "notNullConstraint": false,
+      "objectConstraint": false,
+      "objectDataConstraint": false,
+      "predicateConstraint": false,
+      "primaryKeyConstraint": false,
+      "signatureConstraint": false,
+      "transactionBufferConstraint": false,
+      "uniqueConstraint": false
+    }
+  },
+  "key1SegmentInfo": 17,
+  "key2SegmentInfo": 13,
+  "key3SegmentInfo": 13,
+  "version": 1
+}

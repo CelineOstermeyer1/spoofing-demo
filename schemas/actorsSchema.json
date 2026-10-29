@@ -1,0 +1,90 @@
+{
+  "name": "actorsSchema",
+  "version": 0,
+  "fields": [
+    {
+      "id": {
+        "columnName": "subject"
+      },
+      "dataType": {
+        "dataType": "TUPLESTRING"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "actor_id"
+      },
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "name"
+      },
+      "dataType": {
+        "dataType": "TEXT"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "actor_type"
+      },
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "desk"
+      },
+      "dataType": {
+        "dataType": "TEXT"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "role"
+      },
+      "dataType": {
+        "dataType": "TEXT"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    }
+  ]
+}

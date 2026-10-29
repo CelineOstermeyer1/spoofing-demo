@@ -1,0 +1,155 @@
+{
+  "name": "instrumentsSchema",
+  "version": 0,
+  "fields": [
+    {
+      "id": {
+        "columnName": "subject"
+      },
+      "dataType": {
+        "dataType": "TUPLESTRING"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "instrument_id"
+      },
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "name"
+      },
+      "dataType": {
+        "dataType": "TEXT"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "asset_class"
+      },
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "venue"
+      },
+      "dataType": {
+        "dataType": "TEXT"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "price_unit"
+      },
+      "dataType": {
+        "dataType": "TEXT"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "tick_size"
+      },
+      "dataType": {
+        "dataType": "DOUBLE",
+        "indexParameters": {
+          "anchor": 0,
+          "range": 0,
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "contract_multiplier"
+      },
+      "dataType": {
+        "dataType": "INTEGER",
+        "indexParameters": {
+          "anchor": 0,
+          "range": 0,
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "underlying_id"
+      },
+      "dataType": {
+        "dataType": "VARCHAR",
+        "indexParameters": {
+          "hashSeed": 0
+        }
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    },
+    {
+      "id": {
+        "columnName": "expiry"
+      },
+      "dataType": {
+        "dataType": "TEXT"
+      },
+      "securityLabel": {
+        "level": 1,
+        "compartment": 0,
+        "group": 0
+      }
+    }
+  ]
+}

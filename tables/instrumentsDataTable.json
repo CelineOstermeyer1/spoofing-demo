@@ -1,0 +1,223 @@
+{
+  "catalogName": "demoCatalog",
+  "namespaceName": "demoNamespace",
+  "name": "instrumentsDataTable",
+  "exportable": true,
+  "remote": false,
+  "securityLabel": {
+    "level": 101,
+    "compartment": 0,
+    "group": 0
+  },
+  "primaryIndex": {
+    "catalogName": "demoCatalog",
+    "namespaceName": "demoNamespace",
+    "tableName": "instrumentsDataTable",
+    "name": "instrumentsDataIndex",
+    "versions": [
+      {
+        "name": "instrumentsDataPIX",
+        "predicates": [
+          {
+            "name": "instrumentsPredicateSchema",
+            "schema": {
+              "name": "instrumentsSchema",
+              "version": 1,
+              "fields": [
+                {
+                  "id": {
+                    "columnName": "subject"
+                  },
+                  "dataType": {
+                    "dataType": "TUPLESTRING"
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "instrument_id"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "name"
+                  },
+                  "dataType": {
+                    "dataType": "TEXT"
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "asset_class"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "venue"
+                  },
+                  "dataType": {
+                    "dataType": "TEXT"
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "price_unit"
+                  },
+                  "dataType": {
+                    "dataType": "TEXT"
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "tick_size"
+                  },
+                  "dataType": {
+                    "dataType": "DOUBLE",
+                    "indexParameters": {
+                      "anchor": 0,
+                      "range": 0,
+                      "hashSeed": 0
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "contract_multiplier"
+                  },
+                  "dataType": {
+                    "dataType": "INTEGER",
+                    "indexParameters": {
+                      "anchor": 0,
+                      "range": 0,
+                      "hashSeed": 0
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "underlying_id"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "expiry"
+                  },
+                  "dataType": {
+                    "dataType": "TEXT"
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "fields": {
+          "subject": {
+            "name": "subject",
+            "columnIndex": 1,
+            "dataType": {
+              "dataType": "TUPLESTRING"
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": true,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false,
+            "key1SegmentDepth": 17,
+            "key2SegmentDepth": 13,
+            "key3SegmentDepth": 13
+          }
+        },
+        "key1SegmentInfo": 17,
+        "key2SegmentInfo": 13,
+        "key3SegmentInfo": 13,
+        "version": 1
+      }
+    ],
+    "indexType": "CLUSTERED_INDEX"
+  },
+  "secondaryIndexes": [],
+  "attributes": [
+    "BlackForestIngestPipelineUser",
+    "BlackForestAppFrameworkUser",
+    "BlackForestCatalogUser",
+    "BlackForestRootIdentityAuthority",
+    "d647a6fc-9c6f-4a07-b50e-08590622579f",
+    "BlackForestIdentityAuditor",
+    "BlackForestResourceManagerAdministrator"
+  ]
+}

@@ -1,0 +1,1683 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Black Forest Investigations</title>
+    <link rel="icon" type="image/png" href="/static/img/craxel-logo-white.png">
+    <style>
+        /* Craxel brand guidelines 2.0 (2026): navy leads, blue acts, coral alerts. */
+        @font-face { font-family: "Manrope"; src: url("/static/fonts/manrope-regular.otf") format("opentype"); font-weight: 400; }
+        @font-face { font-family: "Manrope"; src: url("/static/fonts/manrope-medium.otf") format("opentype"); font-weight: 500; }
+        @font-face { font-family: "Manrope"; src: url("/static/fonts/manrope-semibold.otf") format("opentype"); font-weight: 600; }
+        @font-face { font-family: "Manrope"; src: url("/static/fonts/manrope-bold.otf") format("opentype"); font-weight: 700; }
+        @font-face { font-family: "DM Mono"; src: url("/static/fonts/DMMono-Regular.ttf") format("truetype"); font-weight: 400; }
+        @font-face { font-family: "DM Mono"; src: url("/static/fonts/DMMono-Medium.ttf") format("truetype"); font-weight: 500; }
+
+        :root {
+            color-scheme: dark;
+            --navy-900: #080B1A;
+            --navy-850: #0E1121;
+            --slate: #4B5A7A;
+            --blue-600: #2597DA;
+            --blue-400: #38B6FF;
+            --mist: #DCE8F0;
+            --ice: #D9ECFA;
+            --coral: #E5646A;
+            --baseline: #9FB0C6;
+            --text: #FFFFFF;
+            --text-secondary: #C8D3E3;
+            --line: rgba(255, 255, 255, 0.08);
+            --line-strong: rgba(255, 255, 255, 0.16);
+            --font-sans: "Manrope", "Segoe UI", Arial, sans-serif;
+            --font-mono: "DM Mono", "IBM Plex Mono", Consolas, monospace;
+            --radius-card: 24px;
+            --radius-inner: 14px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: var(--navy-900);
+            color: var(--text);
+            font-family: var(--font-sans);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        a, .link {
+            color: var(--blue-400);
+            text-decoration: none;
+            font-weight: 600;
+            background: none;
+            border: 0;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+        }
+        a:hover, .link:hover { color: var(--text); }
+        .link::after, a.link::after { content: " →"; }
+
+        :focus-visible { outline: 2px solid var(--blue-400); outline-offset: 2px; }
+
+        .mono {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+        .eyebrow::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: var(--blue-400);
+            flex: none;
+        }
+        .eyebrow.alert::before { background: var(--coral); }
+
+        .muted { color: var(--text-secondary); }
+        .alert-text { color: var(--coral); }
+
+        /* Header and navigation */
+
+        header {
+            border-bottom: 1px solid var(--line);
+            background: linear-gradient(180deg, var(--navy-850) 0%, var(--navy-900) 100%);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .header-inner {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 10px 24px 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            gap: 8px 28px;
+        }
+        .brand { display: flex; align-items: center; gap: 18px; padding-bottom: 10px; }
+        .brand img { width: 120px; height: auto; display: block; }
+        .brand .product { color: var(--text-secondary); }
+        nav { display: flex; gap: 4px; }
+        nav a {
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 15px;
+            padding: 14px 16px;
+            border-bottom: 2px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        nav a:hover { color: var(--text); }
+        nav a[aria-current="page"] { color: var(--text); border-bottom-color: var(--blue-400); }
+        nav .count { font-family: var(--font-mono); font-size: 12px; color: var(--coral); }
+        .header-spacer { flex: 1 1 40px; }
+        .header-status { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; padding-bottom: 12px; }
+        .connection { display: flex; align-items: center; gap: 8px; color: var(--text-secondary); }
+        .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--baseline); }
+        .dot.ok { background: var(--blue-400); box-shadow: 0 0 12px var(--blue-400); }
+        .dot.down { background: var(--coral); }
+
+        /* Layout */
+
+        main {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .view { display: flex; flex-direction: column; gap: 20px; }
+        .columns { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+        .col-main { flex: 1 1 760px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+        .col-side { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+
+        .card {
+            background: linear-gradient(180deg, var(--navy-850) 0%, var(--navy-900) 100%);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-card);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            min-width: 0;
+        }
+        .card.feature {
+            background:
+                radial-gradient(120% 140% at 100% 0%, rgba(56, 182, 255, 0.22) 0%, rgba(37, 151, 218, 0) 55%),
+                linear-gradient(180deg, var(--navy-850) 0%, var(--navy-900) 100%);
+        }
+        .card-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+        .inner {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-inner);
+            padding: 16px;
+        }
+
+        h1 { margin: 0; font-size: 34px; line-height: 1.12; font-weight: 700; letter-spacing: -0.03em; }
+        h2 { margin: 0; font-size: 22px; line-height: 1.2; font-weight: 600; letter-spacing: -0.02em; }
+        h3 { margin: 0; font-size: 15px; font-weight: 600; color: var(--text-secondary); }
+        p { margin: 0; }
+        .intro { color: var(--text-secondary); max-width: 860px; }
+
+        /* Tabs */
+
+        .case-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+        .tabs { display: flex; flex-wrap: wrap; gap: 4px; }
+        .tab {
+            background: none;
+            border: 0;
+            border-bottom: 2px solid transparent;
+            color: var(--text-secondary);
+            font: inherit;
+            font-weight: 600;
+            padding: 10px 12px;
+            min-height: 44px;
+            cursor: pointer;
+            text-align: left;
+        }
+        .tab .mono { display: block; font-size: 11px; margin-top: 2px; }
+        .tab:hover { color: var(--text); }
+        .tab[aria-selected="true"] { color: var(--text); border-bottom-color: var(--blue-400); }
+        /* Buttons */
+
+        .button {
+            min-height: 44px;
+            padding: 0 20px;
+            border-radius: 10px;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+        .button.primary { background: var(--blue-600); color: var(--text); }
+        .button.primary:hover { background: var(--blue-400); color: var(--navy-900); }
+        .button.secondary { background: transparent; color: var(--text); border-color: rgba(255, 255, 255, 0.32); }
+        .button.secondary:hover { border-color: var(--text); }
+
+        /* Case header */
+
+        .case-header { flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 24px; }
+        .case-header .lead { flex: 1 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+        .labels { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--text-secondary); }
+        .labels .alert-text::before { content: "■ "; }
+        .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: flex-end; }
+        .decision { color: var(--text-secondary); font-size: 13px; }
+
+        /* Summary and stats */
+
+        .summary-text { font-size: 18px; line-height: 1.6; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+        .stat { padding: 14px 16px; }
+        .stat .value { font-size: 30px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; color: var(--blue-400); }
+        .stat.alert .value { color: var(--coral); }
+        .stat.plain .value { color: var(--text); }
+        .stat .label { font-size: 13px; color: var(--text-secondary); font-weight: 500; }
+        ol.findings { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: var(--text-secondary); }
+        ol.findings .ref { font-family: var(--font-mono); font-size: 12px; color: var(--blue-400); margin-left: 6px; }
+        ul.rules { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: var(--text-secondary); }
+
+        /* Timeline */
+
+        #chart svg { width: 100%; min-width: 560px; height: auto; display: block; }
+        .chart-wrap { overflow-x: auto; }
+        .legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; color: var(--text-secondary); padding-top: 8px; }
+        .legend span { display: inline-flex; align-items: center; gap: 8px; }
+
+        /* When it happens: dot chart on the Alerts page */
+
+        .time-wrap svg { width: 100%; height: auto; display: block; }
+        .time-wrap .dot-hit.link { cursor: pointer; }
+        .chart-tip {
+            position: fixed; z-index: 30; pointer-events: none; padding: 8px 10px; border-radius: 8px;
+            background: var(--navy-900); border: 1px solid var(--line-strong); color: var(--text); font-size: 12px; line-height: 1.5;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); max-width: 280px;
+        }
+
+        /* Interactive graph */
+
+        .graph-tools { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 8px 16px; }
+        .zoom { display: flex; gap: 6px; }
+        .zoom-btn {
+            min-height: 34px; min-width: 34px; padding: 2px 12px; border-radius: 10px;
+            border: 1px solid var(--line-strong); background: transparent; color: var(--text-secondary);
+            font: inherit; font-size: 14px; cursor: pointer;
+        }
+        .zoom-btn:hover { color: var(--text); border-color: var(--text-secondary); }
+        .graph-explorer .graph-box { overflow: hidden; touch-action: none; user-select: none; }
+        .gnode { cursor: grab; }
+        .gnode:focus { outline: none; }
+        .gnode:focus rect, .gnode.selected rect { stroke: var(--blue-400); stroke-width: 2.5; }
+        .graph-box.dragging, .graph-box.dragging .gnode { cursor: grabbing; }
+        .graph-box.focus .gedge:not(.hl), .graph-box.focus .glabel:not(.hl), .graph-box.focus .gnode:not(.hl) { opacity: 0.15; }
+        .gedge, .glabel, .gnode { transition: opacity 120ms ease; }
+        .link-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; padding: 0 0 12px; color: var(--text-secondary); font-size: 14px; }
+        .link-filter b { color: var(--text); }
+        #link-rows tr { cursor: default; }
+        #link-rows tr.hl { background: rgba(56, 182, 255, 0.08); }
+
+        /* Tables */
+
+        table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .table-wrap { overflow-x: auto; }
+        th { text-align: left; font-family: var(--font-mono); font-weight: 400; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-secondary); padding: 8px; border-bottom: 1px solid var(--line-strong); }
+        td { padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+        tbody tr.selectable { cursor: pointer; }
+        tbody tr.selectable:hover, tbody tr.selected { background: rgba(56, 182, 255, 0.08); }
+        tbody tr.faded td { color: var(--text-secondary); opacity: 0.7; }
+        td.num { font-family: var(--font-mono); font-size: 12px; white-space: nowrap; }
+        .alerts-table td { font-size: 14px; white-space: nowrap; }
+        .outcome { font-weight: 600; }
+        .outcome.alert { color: var(--coral); }
+        .outcome.cleared { color: var(--text-secondary); font-weight: 500; }
+
+        .verdict { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; }
+        .verdict.missed, .verdict.alert { color: var(--coral); }
+        .verdict.partial, .verdict.cleared { color: var(--text-secondary); }
+        .verdict.caught { color: var(--text); }
+        .verdict.found, .verdict.active { color: var(--blue-400); }
+
+        /* Detection steps */
+
+        ol.trace { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; }
+        ol.trace li { display: grid; grid-template-columns: 28px 1fr auto; gap: 12px; align-items: start; }
+        .step-no {
+            width: 28px; height: 28px; border-radius: 50%;
+            border: 1px solid var(--blue-400); color: var(--blue-400);
+            display: inline-flex; align-items: center; justify-content: center;
+            font-family: var(--font-mono); font-size: 12px;
+        }
+        .step-title { font-weight: 600; }
+        .step-detail { color: var(--text-secondary); font-size: 14px; }
+        .step-time { font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary); white-space: nowrap; text-align: right; }
+        details summary { cursor: pointer; color: var(--blue-400); font-weight: 600; }
+        pre.sql {
+            white-space: pre-wrap; word-break: break-word; margin: 4px 0 0;
+            font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary);
+        }
+
+        /* Graph */
+
+        .graph-box svg { width: 100%; height: auto; display: block; }
+        .graph-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 12px; color: var(--text-secondary); }
+        .graph-legend span { display: inline-flex; align-items: center; gap: 6px; }
+        input[type="date"], input[type="text"] {
+            height: 44px; padding: 0 12px;
+            background: rgba(255, 255, 255, 0.04); border: 1px solid var(--line-strong); border-radius: 10px;
+            color: var(--text); font: inherit; font-size: 14px;
+        }
+        input[type="text"] { width: 100%; }
+        .graph-explorer .graph-box { max-width: 1000px; width: 100%; margin: 0 auto; }
+
+        /* Communications */
+
+        .call { display: flex; flex-direction: column; gap: 10px; }
+        .call.flagged { border-color: var(--coral); }
+        .call-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+        .call-head .when { color: var(--text); }
+        .lines { display: grid; grid-template-columns: 84px 1fr; gap: 6px 12px; font-size: 14px; }
+        .lines .speaker { color: var(--text-secondary); }
+        mark { background: rgba(229, 100, 106, 0.22); color: var(--text); padding: 0 3px; border-radius: 3px; }
+        .note { color: var(--coral); font-size: 13px; font-weight: 600; }
+        .logins { margin: 0; padding-left: 18px; color: var(--text-secondary); font-size: 14px; }
+
+
+        /* States */
+
+        .state { text-align: center; padding: 80px 24px; display: flex; flex-direction: column; gap: 14px; align-items: center; }
+        .state h2 { font-size: 28px; }
+        .progress { width: 280px; height: 3px; background: var(--line-strong); border-radius: 3px; overflow: hidden; }
+        .progress::after { content: ""; display: block; width: 40%; height: 100%; background: var(--blue-400); animation: slide 1.4s ease-in-out infinite; }
+        @keyframes slide { from { transform: translateX(-100%); } to { transform: translateX(250%); } }
+        @media (prefers-reduced-motion: reduce) { .progress::after { animation: none; width: 100%; } }
+
+        footer {
+            display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
+            padding: 8px 0 24px; color: var(--text-secondary);
+        }
+        [hidden] { display: none !important; }
+
+        /* Collapsible sections: detail stays one click away */
+        details.fold > summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+        details.fold > summary::-webkit-details-marker { display: none; }
+        details.fold > summary::after {
+            content: "+";
+            font-family: var(--font-mono);
+            font-size: 18px;
+            color: var(--blue-400);
+            line-height: 1;
+        }
+        details.fold[open] > summary::after { content: "−"; }
+        details.fold[open] > summary { margin-bottom: 16px; }
+        details.fold.card { gap: 0; }
+
+        .headline { font-size: 20px; line-height: 1.5; font-weight: 500; max-width: 900px; }
+        .subtitle { font-family: var(--font-mono); font-size: 15px; letter-spacing: 0.08em; color: var(--text-secondary); }
+
+        details.call > summary {
+            list-style: none;
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 12px;
+            align-items: baseline;
+        }
+        details.call > summary::-webkit-details-marker { display: none; }
+        details.call[open] > summary { margin-bottom: 10px; }
+        .call-id { font-family: var(--font-mono); font-size: 12px; color: var(--blue-400); }
+        .call-quote { color: var(--text-secondary); font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .call-lead { font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary); white-space: nowrap; }
+        details.call.flagged .call-lead { color: var(--coral); }
+
+        /* Landscape screens: the Cases page fits one screen and long panels scroll inside */
+        @media (min-width: 1280px) and (min-height: 720px) {
+            .header-inner, main { max-width: 1880px; }
+            body[data-page="cases"] { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+            body[data-page="cases"] main { flex: 1; min-height: 0; width: 100%; padding-top: 14px; padding-bottom: 14px; gap: 12px; }
+            body[data-page="cases"] #workspace { flex: 1; min-height: 0; gap: 12px; }
+            body[data-page="cases"] footer { display: none; }
+
+            /* Graph explorer: the graph fills the height, the links list scrolls beside it */
+            body[data-page="graph"] { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+            body[data-page="graph"] main { flex: 1; min-height: 0; width: 100%; padding-top: 14px; padding-bottom: 14px; gap: 12px; }
+            body[data-page="graph"] #workspace { flex: 1; min-height: 0; gap: 12px; }
+            body[data-page="graph"] footer { display: none; }
+            .view[data-view="graph"] {
+                flex: 1;
+                min-height: 0;
+                display: grid;
+                gap: 12px;
+                grid-template-columns: minmax(0, 1.25fr) minmax(520px, 1fr);
+            }
+            .graph-main { min-height: 0; padding: 16px 20px; gap: 12px; }
+            .graph-main .graph-box { flex: 1; min-height: 0; max-width: none; display: flex; align-items: center; justify-content: center; }
+            .graph-main .graph-box svg { width: 100%; height: 100%; }
+            .graph-links { min-height: 0; overflow: auto; padding: 16px 20px; }
+
+            .view[data-view="cases"] {
+                flex: 1;
+                min-height: 0;
+                display: grid;
+                gap: 12px;
+                grid-template-columns: minmax(300px, 1fr) minmax(0, 2.1fr) minmax(300px, 1fr);
+                grid-template-rows: auto minmax(0, 1fr);
+                grid-template-areas:
+                    "head    head     head"
+                    "summary timeline calls";
+            }
+            .view[data-view="cases"] .columns,
+            .view[data-view="cases"] .col-main,
+            .view[data-view="cases"] .col-side { display: contents; }
+            .view[data-view="cases"] .card { padding: 16px 20px; gap: 12px; min-height: 0; overflow: auto; }
+            .area-head { grid-area: head; align-items: center; }
+            .area-summary { grid-area: summary; }
+            .area-timeline { grid-area: timeline; }
+            .area-calls { grid-area: calls; }
+
+            .area-head .lead { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 4px 20px; }
+            .area-head h1 { font-size: 26px; }
+            .area-summary .headline { font-size: 16px; }
+            .area-summary .summary-text { font-size: 14px; }
+            .area-summary ol.findings { font-size: 14px; }
+            .area-summary .stats { grid-template-columns: 1fr 1fr; gap: 8px; }
+            .area-summary .stat { padding: 10px 12px; }
+            .area-summary .stat .value { font-size: 24px; }
+            .area-timeline h2 { font-size: 18px; }
+            .area-timeline .chart-wrap { flex: 1 0 auto; min-height: 300px; display: flex; flex-direction: column; overflow: hidden; }
+            .area-timeline #chart { flex: 1; min-height: 0; }
+            .area-timeline #chart svg { width: 100%; height: 100%; min-width: 0; }
+            .area-timeline td { padding: 7px 8px; }
+        }
+
+        @media (max-width: 760px) {
+            .header-inner, main { padding-left: 16px; padding-right: 16px; }
+            .header-status { align-items: flex-start; }
+            nav { overflow-x: auto; max-width: 100%; }
+            nav a { padding: 12px 10px; font-size: 14px; }
+            h1 { font-size: 26px; }
+            .summary-text { font-size: 16px; }
+            .lines { grid-template-columns: 1fr; }
+            ol.trace li { grid-template-columns: 28px 1fr; }
+            .step-time { grid-column: 2; text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="brand">
+            <img src="/static/img/craxel-logo-white.png" alt="Craxel">
+            <span class="product mono">Black Forest™ · Investigations</span>
+        </div>
+        <nav aria-label="Workspace">
+            <a href="#/alerts" data-nav="alerts">Alerts <span class="count" id="alert-count"></span></a>
+            <a href="#/cases" data-nav="cases">Cases</a>
+            <a href="#/graph" data-nav="graph">Graph explorer</a>
+            <a href="#/metrics" data-nav="metrics">Metrics</a>
+        </nav>
+        <div class="header-spacer"></div>
+        <div class="header-status">
+            <div class="connection mono" id="connection"><span class="dot"></span><span>Connecting</span></div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="state card" id="state-loading">
+        <span class="eyebrow">Investigation</span>
+        <h2>Running detection in Black Forest</h2>
+        <p class="muted">Checking every large equity sale against futures orders, instrument links, people and calls.</p>
+        <div class="progress" aria-hidden="true"></div>
+    </section>
+
+    <section class="state card" id="state-error" hidden>
+        <span class="eyebrow alert">Black Forest unavailable</span>
+        <h2>The investigation could not run</h2>
+        <p class="muted" id="error-detail"></p>
+        <button class="button secondary" type="button" id="retry">Try again</button>
+    </section>
+
+    <div id="workspace" class="view" hidden>
+
+        <div class="case-bar" id="case-bar">
+            <div class="tabs" role="tablist" aria-label="Cases" id="case-tabs"></div>
+        </div>
+
+        <!-- ============================== ALERTS ============================== -->
+        <div class="view" data-view="alerts">
+            <section class="card feature">
+                <span class="eyebrow">Alerts</span>
+                <div class="stats" id="alert-stats"></div>
+            </section>
+
+            <section class="card" aria-label="Large trades by time and size">
+                <div class="card-head">
+                    <div style="display: flex; flex-direction: column; gap: 6px;">
+                        <span class="eyebrow">When it happens and how big</span>
+                        <h2 id="time-title"></h2>
+                    </div>
+                    <div class="legend" id="time-legend"></div>
+                </div>
+                <div class="inner time-wrap" id="time-chart"></div>
+                <div class="chart-tip mono" id="time-tip" hidden></div>
+            </section>
+
+            <section class="card">
+                <div class="card-head">
+                    <span class="eyebrow">Large executions</span>
+                    <span class="mono muted">Select an alert to open it</span>
+                </div>
+                <div class="table-wrap">
+                    <table class="alerts-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Time (UTC)</th>
+                                <th scope="col">Execution</th>
+                                <th scope="col">Futures pressure</th>
+                                <th scope="col">Outcome</th>
+                                <th scope="col">Same-account check</th>
+                                <th scope="col">Case</th>
+                            </tr>
+                        </thead>
+                        <tbody id="alert-rows"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <details class="card fold">
+                <summary><span class="eyebrow">Detection rules</span></summary>
+                <ul class="rules" id="rules"></ul>
+            </details>
+        </div>
+
+        <!-- ============================== CASES ============================== -->
+        <div class="view" data-view="cases">
+            <section class="card feature case-header area-head" aria-label="Case summary">
+                <div class="lead">
+                    <span class="eyebrow alert" id="case-eyebrow"></span>
+                    <h1 id="case-title"></h1>
+                    <span class="subtitle" id="case-subtitle"></span>
+                    <div class="labels mono" id="case-labels"></div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-end;">
+                    <div class="actions">
+                        <button class="button primary" type="button" data-decision="Escalated to compliance">Escalate to compliance</button>
+                        <button class="button secondary" type="button" data-decision="STOR draft started">Draft STOR</button>
+                        <button class="link" type="button" data-decision="Closed as a false positive">Close as false positive</button>
+                    </div>
+                    <span class="decision" id="decision" aria-live="polite"></span>
+                </div>
+            </section>
+
+            <div class="columns">
+                <div class="col-main">
+                    <section class="card area-summary" aria-label="Summary">
+                        <p class="headline" id="headline"></p>
+                        <div class="stats" id="stats"></div>
+                        <details class="fold" id="evidence">
+                            <summary><span class="mono" id="evidence-label">Evidence</span></summary>
+                            <div style="display: flex; flex-direction: column; gap: 14px;">
+                                <p class="summary-text muted" id="summary-text"></p>
+                                <ol class="findings" id="findings"></ol>
+                            </div>
+                        </details>
+                    </section>
+
+                    <section class="card area-timeline" aria-label="Linked timeline">
+                        <div class="card-head">
+                            <div style="display: flex; flex-direction: column; gap: 6px;">
+                                <span class="eyebrow">Timeline</span>
+                                <h2 id="episode-title"></h2>
+                            </div>
+                            <div class="tabs" role="tablist" aria-label="Choose episode" id="episode-tabs"></div>
+                        </div>
+                        <div class="inner chart-wrap">
+                            <div id="chart"></div>
+                            <div class="legend" id="chart-legend"></div>
+                        </div>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Episode</th>
+                                        <th scope="col" id="th-pressure">Pressure leg</th>
+                                        <th scope="col">Cancelled</th>
+                                        <th scope="col" id="th-sale">Execution leg</th>
+                                        <th scope="col">Gap</th>
+                                        <th scope="col">Call before</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="episode-rows"></tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="col-side">
+                    <section class="card area-calls" aria-label="Communications">
+                        <div class="card-head">
+                            <span class="eyebrow" id="comms-eyebrow">Calls</span>
+                            <span class="mono muted" title="Speech to text: verify against the audio">Transcribed</span>
+                        </div>
+                        <div id="calls" style="display: flex; flex-direction: column; gap: 10px;"></div>
+                        <p class="mono muted" id="logins-line"></p>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================== GRAPH EXPLORER ============================== -->
+        <div class="view graph-explorer" data-view="graph">
+            <section class="card graph-main">
+                <div class="card-head">
+                    <div style="display: flex; flex-direction: column; gap: 6px;">
+                        <span class="eyebrow" id="graph-eyebrow">Graph explorer</span>
+                        <h2 id="graph-title"></h2>
+                    </div>
+                    <span class="mono muted" id="graph-meta"></span>
+                </div>
+                <div class="graph-tools">
+                    <div class="zoom">
+                        <button class="zoom-btn" type="button" id="zoom-in" aria-label="Zoom in">+</button>
+                        <button class="zoom-btn" type="button" id="zoom-out" aria-label="Zoom out">−</button>
+                        <button class="zoom-btn" type="button" id="zoom-reset">Reset</button>
+                    </div>
+                </div>
+                <div class="inner graph-box" id="big-graph"></div>
+                <div class="graph-legend" data-legend></div>
+            </section>
+
+            <details class="card fold graph-links" id="graph-links">
+                <summary><span class="eyebrow">All links</span><span class="mono muted" id="links-meta" style="margin-left: auto;"></span></summary>
+                <div class="link-filter" id="link-filter" hidden></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Link</th>
+                                <th scope="col">From</th>
+                                <th scope="col">To</th>
+                                <th scope="col">Source</th>
+                                <th scope="col">Confidence</th>
+                                <th scope="col">Valid from</th>
+                                <th scope="col">On this date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="link-rows"></tbody>
+                    </table>
+                </div>
+            </details>
+        </div>
+
+        <!-- ============================== METRICS ============================== -->
+        <div class="view" data-view="metrics">
+            <div class="columns">
+                <div class="col-main">
+                    <section class="card feature">
+                        <div class="card-head">
+                            <span class="eyebrow">Detection steps</span>
+                            <div style="display: flex; gap: 20px;">
+                                <button class="link" type="button" id="export">Export audit trail</button>
+                                <button class="link" type="button" id="rerun">Run again</button>
+                            </div>
+                        </div>
+                        <h2 id="metrics-title"></h2>
+                        <ol class="trace" id="trace-steps"></ol>
+                    </section>
+
+                    <details class="card fold">
+                        <summary><span class="eyebrow">All queries</span><span class="mono muted" id="queries-meta" style="margin-left: auto;"></span></summary>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Step</th>
+                                        <th scope="col">Rows</th>
+                                        <th scope="col">Time</th>
+                                        <th scope="col">Query</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="query-rows"></tbody>
+                            </table>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mono">
+            <span>Synthetic data · Decision support only</span>
+        </footer>
+    </div>
+</main>
+
+<script>
+const COLORS = {
+    blue: "#38B6FF",
+    coral: "#E5646A",
+    baseline: "#9FB0C6",
+    secondary: "#C8D3E3",
+    grid: "rgba(255,255,255,0.16)",
+    navy: "#080B1A",
+    panel: "#0E1121",
+};
+const VIEWS = ["alerts", "cases", "graph", "metrics"];
+const STEP_NAMES = {
+    reference: "1 · Reference data", executions: "1 · Large executions", instruments: "2 · Instrument links",
+    search: "3 · Futures search", history: "3 · Normal order sizes", prices: "3 · Price path",
+    people: "4 · People links", comms: "5 · Calls and logins",
+};
+
+let investigation = null;
+const caseCache = {};
+let currentCase = null;
+let currentEpisode = 0;
+
+const $ = (id) => document.getElementById(id);
+
+function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, (c) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+    })[c]);
+}
+
+const formatNumber = (value) => Number(value).toLocaleString("en-GB");
+
+function formatDuration(seconds) {
+    if (seconds === null || seconds === undefined) return "No call";
+    const total = Math.round(seconds);
+    const m = Math.floor(total / 60);
+    const s = total % 60;
+    return m ? `${m} m ${s} s` : `${seconds < 10 ? Number(seconds).toFixed(1) : s} s`;
+}
+
+const formatMs = (ms) => (ms >= 1000 ? `${(ms / 1000).toFixed(1)} s` : `${Math.round(ms)} ms`);
+
+// Built by hand so every browser writes "15 Sep", not "15 Sept".
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const pad = (n) => String(n).padStart(2, "0");
+
+function formatDay(value) {
+    const d = new Date(value);
+    return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]}`;
+}
+
+function formatTime(value, withSeconds = true) {
+    const d = new Date(value);
+    return `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}${withSeconds ? ":" + pad(d.getUTCSeconds()) : ""}`;
+}
+
+const formatWhen = (value, withSeconds = true) => `${formatDay(value)} ${formatTime(value, withSeconds)}`;
+const formatFullWhen = (value) => `${formatDay(value)} ${new Date(value).getUTCFullYear()}, ${formatTime(value)} UTC`;
+
+async function getJson(url, options) {
+    const response = await fetch(url, options);
+    if (!response.ok) {
+        const body = await response.json().catch(() => ({}));
+        throw new Error(body.detail || `HTTP ${response.status}`);
+    }
+    return response.json();
+}
+
+/* ------------------------------------------------------------
+   Start-up
+------------------------------------------------------------ */
+
+async function loadStatus() {
+    const box = $("connection");
+    try {
+        const status = await getJson("/api/status");
+        const ok = status.black_forest === "connected";
+        const loaded = status.tables.filter((t) => t.rows !== null).length;
+        box.innerHTML = `<span class="dot ${ok ? "ok" : "down"}"></span><span>${ok
+            ? `Black Forest · ${formatNumber(status.total_rows)} rows · Synthetic data`
+            : "Black Forest unavailable"}</span>`;
+        box.title = `${loaded} tables connected`;
+        box.title += "\n" + status.tables.map((t) => `${t.label}: ${t.rows ?? "error"} rows (${t.table})`).join("\n");
+    } catch (error) {
+        box.innerHTML = `<span class="dot down"></span><span>Black Forest unavailable</span>`;
+    }
+}
+
+function showState(name) {
+    $("state-loading").hidden = name !== "loading";
+    $("state-error").hidden = name !== "error";
+    $("workspace").hidden = name !== "ready";
+}
+
+async function waitForInvestigation() {
+    showState("loading");
+    for (;;) {
+        const body = await getJson("/api/investigation");
+        if (body.status === "ready") return body;
+        if (body.status === "error") throw new Error(body.error);
+        if (body.status === "idle") await getJson("/api/investigation/run", { method: "POST" });
+        await new Promise((resolve) => setTimeout(resolve, 800));
+    }
+}
+
+async function start() {
+    try {
+        investigation = await waitForInvestigation();
+        Object.keys(caseCache).forEach((key) => delete caseCache[key]);
+        if (!investigation.cases.length) throw new Error("Detection ran but raised no cases.");
+        $("alert-count").textContent = investigation.examined.filter((e) => e.result === "alert").length;
+        renderCaseTabs();
+        showState("ready");
+        // Open on Alerts, unless the address points at a particular case (a refresh or shared link).
+        if (!parseRoute().caseId) history.replaceState(null, "", "#/alerts");
+        await route();
+    } catch (error) {
+        $("error-detail").textContent = error.message;
+        showState("error");
+    }
+}
+
+async function rerun() {
+    await getJson("/api/investigation/run", { method: "POST" }).catch(() => {});
+    await new Promise((resolve) => setTimeout(resolve, 300));
+    start();
+}
+
+$("retry").addEventListener("click", rerun);
+$("rerun").addEventListener("click", rerun);
+
+/* ------------------------------------------------------------
+   Routing: #/alerts, #/cases/ID[/E2], #/graph/ID, #/metrics/ID
+------------------------------------------------------------ */
+
+function parseRoute() {
+    const parts = location.hash.replace(/^#\/?/, "").split("/").filter(Boolean).map(decodeURIComponent);
+    return {
+        view: VIEWS.includes(parts[0]) ? parts[0] : "alerts",
+        caseId: parts[1] || null,
+        episode: parts[2] || null,
+    };
+}
+
+function defaultCaseId() {
+    return (investigation.cases.find((c) => c.kind === "cross_actor") || investigation.cases[0]).id;
+}
+
+let lastView = null;
+
+async function route() {
+    if (!investigation) return;
+    const { view, caseId, episode } = parseRoute();
+    const id = investigation.cases.some((c) => c.id === caseId) ? caseId : (currentCase?.id || defaultCaseId());
+
+    document.querySelectorAll("[data-view]").forEach((el) => { el.hidden = el.dataset.view !== view; });
+    document.body.dataset.page = view;
+    document.querySelectorAll("nav a").forEach((a) => {
+        if (a.dataset.nav !== "alerts") a.href = `#/${a.dataset.nav}/${encodeURIComponent(id)}`;
+        if (a.dataset.nav === view) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    });
+    $("case-tabs").hidden = view === "alerts";
+
+    if (view === "alerts") {
+        renderAlerts();
+    } else {
+        const switched = !currentCase || currentCase.id !== id;
+        await loadCase(id);
+        document.querySelectorAll("#case-tabs .tab").forEach((tab) =>
+            tab.setAttribute("aria-selected", String(tab.dataset.case === id)));
+        if (episode) {
+            const index = currentCase.episodes.findIndex((e) => e.id === episode);
+            currentEpisode = index >= 0 ? index : 0;
+        } else if (switched) {
+            currentEpisode = 0;
+        }
+        if (view === "cases") renderCaseView();
+        if (view === "graph") renderGraphView();
+        if (view === "metrics") renderMetricsView();
+    }
+    if (view !== lastView) window.scrollTo(0, 0);
+    lastView = view;
+}
+
+window.addEventListener("hashchange", route);
+
+async function loadCase(id) {
+    if (!caseCache[id]) caseCache[id] = await getJson(`/api/cases/${encodeURIComponent(id)}`);
+    if (currentCase?.id !== id) $("decision").textContent = "";
+    currentCase = caseCache[id];
+}
+
+// On a landscape screen there is room to show the evidence and the links list without a click.
+if (matchMedia("(min-width: 1280px) and (min-height: 720px)").matches) {
+    $("evidence").open = true;
+    $("graph-links").open = true;
+}
+
+function renderCaseTabs() {
+    $("case-tabs").innerHTML = investigation.cases.map((c) => `
+        <button class="tab" role="tab" type="button" data-case="${escapeHtml(c.id)}" aria-selected="false">
+            ${escapeHtml(c.id)}
+            <span class="mono">${c.kind === "cross_actor" ? "Cross-actor" : "Same account"} · ${c.episodes} episodes</span>
+        </button>`).join("");
+    document.querySelectorAll("#case-tabs .tab").forEach((tab) =>
+        tab.addEventListener("click", () => {
+            location.hash = `#/${parseRoute().view}/${encodeURIComponent(tab.dataset.case)}`;
+        }));
+}
+
+/* ------------------------------------------------------------
+   Alerts page
+------------------------------------------------------------ */
+
+function renderAlerts() {
+    const rows = investigation.examined;
+    const alerts = rows.filter((r) => r.result === "alert");
+    const missed = alerts.filter((r) => !r.same_account_check).length;
+    $("alert-stats").innerHTML = [
+        { value: rows.length, label: "Large trades checked", tone: "plain" },
+        { value: alerts.length, label: "Alerts", tone: "alert" },
+        { value: missed, label: "Missed by same-account check", tone: "alert" },
+        { value: rows.length - alerts.length, label: "Cleared", tone: "plain" },
+    ].map((s) => `
+        <div class="inner stat ${s.tone}">
+            <div class="value">${escapeHtml(s.value)}</div>
+            <div class="label">${escapeHtml(s.label)}</div>
+        </div>`).join("");
+
+    // Alerts first; cleared trades fold under one row so a large run doesn't bury them.
+    const cleared = rows.filter((r) => r.result !== "alert");
+    const ordered = [...alerts, ...cleared];
+    $("alert-rows").innerHTML = ordered.map((r) => {
+        const isAlert = r.result === "alert";
+        const verb = r.side === "SELL" ? "sold" : "bought";
+        const outcome = r.label.replace(/^Cleared: /, "");
+        const check = !isAlert ? ""
+            : r.same_account_check ? `<span class="verdict caught">Would flag</span>` : `<span class="verdict missed">Would miss</span>`;
+        return `<tr class="${isAlert ? "selectable" : "faded cleared-row"}" ${isAlert ? `data-href="#/cases/${encodeURIComponent(r.case_id)}/${r.episode}" tabindex="0"` : "hidden"}>
+            <td class="num">${escapeHtml(formatWhen(r.ts))}</td>
+            <td><b>${escapeHtml(r.account)}</b> ${verb} ${formatNumber(r.qty)} ${escapeHtml(r.instrument)}</td>
+            <td>${r.pressure_account ? `${escapeHtml(r.pressure_account)} in ${escapeHtml(r.pressure_future)}` : ""}</td>
+            <td><span class="outcome ${isAlert ? "alert" : "cleared"}">${escapeHtml(isAlert ? "Alert" : "Cleared · " + outcome)}</span></td>
+            <td>${check}</td>
+            <td>${isAlert ? `<a href="#/cases/${encodeURIComponent(r.case_id)}/${r.episode}">${escapeHtml(r.case_id)} · ${escapeHtml(r.episode)}</a>` : ""}</td>
+        </tr>`;
+    }).join("");
+    if (cleared.length) {
+        $("alert-rows").insertAdjacentHTML("beforeend", `
+            <tr><td colspan="6"><button class="link" type="button" id="toggle-cleared">Show ${formatNumber(cleared.length)} cleared trades</button></td></tr>`);
+        $("toggle-cleared").addEventListener("click", (event) => {
+            const rowsToToggle = document.querySelectorAll("#alert-rows .cleared-row");
+            const show = rowsToToggle[0].hidden;
+            rowsToToggle.forEach((row) => { row.hidden = !show; });
+            event.target.textContent = show ? "Hide cleared trades" : `Show ${formatNumber(cleared.length)} cleared trades`;
+        });
+    }
+    document.querySelectorAll("#alert-rows tr[data-href]").forEach((row) => {
+        row.addEventListener("click", (event) => { if (event.target.tagName !== "A") location.hash = row.dataset.href; });
+        row.addEventListener("keydown", (event) => { if (event.key === "Enter") location.hash = row.dataset.href; });
+    });
+    $("rules").innerHTML = investigation.rules.map((rule) => `<li>${escapeHtml(rule)}</li>`).join("") +
+        `<li class="muted">Tuned to this synthetic dataset, not for production.</li>`;
+    renderTimeChart(rows);
+}
+
+/* When it happens: each large trade as a dot, date along the bottom and size up the side.
+   Dots, not a line: the trades are separate events, so joining them would invent a trend. */
+
+function niceStep(max, target = 5) {
+    const raw = max / target, mag = 10 ** Math.floor(Math.log10(raw));
+    return [1, 2, 2.5, 5, 10].map((m) => m * mag).find((s) => s >= raw);
+}
+
+function renderTimeChart(rows) {
+    const alerts = rows.filter((r) => r.result === "alert");
+    if (!alerts.length) {
+        $("time-title").textContent = "No alerts in this run";
+    } else {
+        const days = [...new Set(alerts.map((r) => r.ts.slice(0, 10)))].sort();
+        const sizes = alerts.map((r) => r.qty);
+        $("time-title").textContent = `Alerts on ${days.length} ${days.length === 1 ? "day" : "days"}, ${formatDay(days[0] + "T00:00:00Z")} to ${formatDay(days[days.length - 1] + "T00:00:00Z")} · ` +
+            `${formatNumber(Math.min(...sizes))} to ${formatNumber(Math.max(...sizes))} shares`;
+    }
+    $("time-legend").innerHTML = `
+        <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="${COLORS.coral}"/></svg>Alert</span>
+        <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="4" fill="${COLORS.baseline}" opacity="0.7"/></svg>Cleared large trade</span>
+        <span><svg width="24" height="6" aria-hidden="true"><line x1="0" y1="3" x2="24" y2="3" stroke="${COLORS.secondary}" stroke-dasharray="5 4"/></svg>Checked from 25,000 shares</span>`;
+
+    const box = $("time-chart");
+    if (!rows.length) { box.innerHTML = `<p class="muted" style="padding: 12px;">Nothing to plot.</p>`; return; }
+
+    // Drawn at the box's own width so text stays at its real size.
+    const W = Math.max(600, Math.round(box.clientWidth - 32) || 1000), H = 320;
+    const left = 76, right = W - 24, top = 34, bottom = H - 34;
+
+    // x: whole days across the period.
+    const dayMs = 86400000;
+    const times = rows.map((r) => Date.parse(r.ts));
+    const x0 = Math.floor(Math.min(...times) / dayMs) * dayMs;
+    const x1 = Math.max(Math.ceil(Math.max(...times) / dayMs) * dayMs, x0 + 2 * dayMs);
+    const xOf = (r) => Date.parse(r.ts);
+    const span = (x1 - x0) / dayMs, every = span > 40 ? 7 : span > 14 ? 3 : 1;
+    const ticks = [];
+    for (let t = x0; t <= x1; t += every * dayMs) ticks.push({ t, label: formatDay(new Date(t).toISOString()) });
+    const x = (v) => left + ((v - x0) / (x1 - x0)) * (right - left);
+
+    // y: shares from zero, so the 25,000 threshold and the gap above it read honestly.
+    const biggest = Math.max(...rows.map((r) => r.qty));
+    const step = niceStep(biggest * 1.1);
+    const yMax = Math.ceil((biggest * 1.08) / step) * step;
+    const y = (q) => bottom - (q / yMax) * (bottom - top);
+
+    const parts = [];
+    for (let q = 0; q <= yMax; q += step) {
+        parts.push(`<line x1="${left}" y1="${y(q)}" x2="${right}" y2="${y(q)}" stroke="${COLORS.grid}" ${q ? `stroke-dasharray="2 4"` : ""}/>`);
+        parts.push(`<text x="${left - 10}" y="${y(q) + 4}" fill="${COLORS.secondary}" font-size="11" text-anchor="end" font-family="DM Mono">${q ? formatNumber(q / 1000) + "k" : "0"}</text>`);
+    }
+    parts.push(`<text x="${left - 10}" y="${top - 18}" fill="${COLORS.secondary}" font-size="11" text-anchor="end" font-family="DM Mono">shares</text>`);
+    parts.push(`<line x1="${left}" y1="${y(25000)}" x2="${right}" y2="${y(25000)}" stroke="${COLORS.secondary}" stroke-dasharray="5 4" opacity="0.8"/>`);
+    ticks.forEach(({ t, label }) => {
+        parts.push(`<line x1="${x(t)}" y1="${bottom}" x2="${x(t)}" y2="${bottom + 5}" stroke="${COLORS.grid}"/>`);
+        parts.push(`<text x="${x(t)}" y="${bottom + 20}" fill="${COLORS.secondary}" font-size="11" text-anchor="middle" font-family="DM Mono">${escapeHtml(label)}</text>`);
+    });
+
+    // Cleared first so alerts draw on top, each alert with a surface ring.
+    [...rows.filter((r) => r.result !== "alert"), ...alerts].forEach((r) => {
+        const isAlert = r.result === "alert";
+        const cx = x(xOf(r)), cy = y(r.qty);
+        parts.push(isAlert
+            ? `<circle cx="${cx}" cy="${cy}" r="6" fill="${COLORS.coral}" stroke="${COLORS.panel}" stroke-width="2"/>`
+            : `<circle cx="${cx}" cy="${cy}" r="4" fill="${COLORS.baseline}" opacity="0.6"/>`);
+        parts.push(`<circle class="dot-hit ${isAlert ? "link" : ""}" data-row="${rows.indexOf(r)}" cx="${cx}" cy="${cy}" r="${isAlert ? 11 : 8}" fill="transparent"/>`);
+    });
+    const label = `Large trades plotted by date and size in shares. ${alerts.length} alerts and ${rows.length - alerts.length} cleared trades.`;
+    box.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${escapeHtml(label)}" font-family="Manrope, sans-serif">${parts.join("")}</svg>`;
+
+    const tip = $("time-tip");
+    box.querySelectorAll(".dot-hit").forEach((dot) => {
+        const r = rows[Number(dot.dataset.row)];
+        dot.addEventListener("mouseenter", () => {
+            tip.innerHTML = `${escapeHtml(formatWhen(r.ts))} UTC<br><b>${escapeHtml(r.account)}</b> ${r.side === "SELL" ? "sold" : "bought"} ${formatNumber(r.qty)} ${escapeHtml(r.instrument)}<br>` +
+                (r.result === "alert" ? `<span style="color: ${COLORS.coral}">Alert · ${escapeHtml(r.case_id)} ${escapeHtml(r.episode)}</span>` : `<span class="muted">${escapeHtml(r.label)}</span>`);
+            tip.hidden = false;
+        });
+        dot.addEventListener("mousemove", (event) => {
+            tip.style.left = `${Math.min(event.clientX + 14, window.innerWidth - 290)}px`;
+            tip.style.top = `${event.clientY + 14}px`;
+        });
+        dot.addEventListener("mouseleave", () => { tip.hidden = true; });
+        if (r.result === "alert") dot.addEventListener("click", () => {
+            tip.hidden = true;
+            location.hash = `#/cases/${encodeURIComponent(r.case_id)}/${r.episode}`;
+        });
+    });
+}
+
+/* ------------------------------------------------------------
+   Cases page
+------------------------------------------------------------ */
+
+function renderCaseView() {
+    const c = currentCase;
+    $("case-eyebrow").textContent = `Case ${c.id}`;
+    $("case-title").textContent = c.short_title;
+    $("case-title").title = c.title;
+    $("case-subtitle").textContent = c.kind === "same_account"
+        ? c.pressure_account : `${c.pressure_account} → ${c.sale_account}`;
+    const labels = [
+        `<span class="${c.priority === "High" ? "alert-text" : ""}">${escapeHtml(c.priority)} priority</span>`,
+        `<span>${c.episodes.length} episodes · ${escapeHtml(c.date_range)}</span>`,
+        `<span>${c.pairs.map(escapeHtml).join(" · ")}</span>`,
+    ];
+    if (c.connected_party) labels.push(`<span class="alert-text">Connected party</span>`);
+    $("case-labels").innerHTML = labels.join("");
+
+    $("headline").innerHTML = emphasiseNames(c.headline, c);
+    $("evidence-label").textContent = `Summary and evidence · ${c.findings.length}`;
+    $("summary-text").innerHTML = emphasiseNames(c.summary, c);
+    $("stats").innerHTML = c.stats.map((s) => `
+        <div class="inner stat ${s.tone === "alert" ? "alert" : ""}">
+            <div class="value">${escapeHtml(s.value)}</div>
+            <div class="label">${escapeHtml(s.label)}</div>
+        </div>`).join("");
+    $("findings").innerHTML = c.findings.map((f) =>
+        `<li>${escapeHtml(f.text)}<span class="ref">${escapeHtml(f.ref)}</span></li>`).join("");
+
+    renderEpisodeTabs();
+    renderEpisode();
+    renderEpisodeTable();
+
+    renderComms();
+}
+
+function emphasiseNames(text, c) {
+    let html = escapeHtml(text);
+    const names = [c.trader.name, c.trader.id, c.counterparty.name, c.sale_account, c.pressure_account];
+    for (const name of [...new Set(names.filter(Boolean))].sort((a, b) => b.length - a.length)) {
+        const safe = escapeHtml(name).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        html = html.replace(new RegExp(`(?<![\\w>])${safe}(?![\\w<])`, "g"), `<b>${escapeHtml(name)}</b>`);
+    }
+    return html;
+}
+
+function renderEpisodeTabs() {
+    $("episode-tabs").innerHTML = currentCase.episodes.map((e, i) => `
+        <button class="tab" role="tab" type="button" data-episode="${i}" aria-selected="${i === currentEpisode}">
+            ${escapeHtml(e.id)} · ${escapeHtml(formatDay(e.start))}
+        </button>`).join("");
+    document.querySelectorAll("#episode-tabs .tab").forEach((tab) =>
+        tab.addEventListener("click", () => selectEpisode(Number(tab.dataset.episode))));
+}
+
+function selectEpisode(index) {
+    currentEpisode = index;
+    history.replaceState(null, "", `#/cases/${encodeURIComponent(currentCase.id)}/${currentCase.episodes[index].id}`);
+    document.querySelectorAll("#episode-tabs .tab").forEach((tab) =>
+        tab.setAttribute("aria-selected", String(Number(tab.dataset.episode) === index)));
+    document.querySelectorAll("#episode-rows tr").forEach((row, i) => row.classList.toggle("selected", i === index));
+    renderEpisode();
+}
+
+function renderEpisode() {
+    const e = currentCase.episodes[currentEpisode];
+    $("episode-title").textContent = `Episode ${e.id} · ${formatFullWhen(e.start)}`;
+    $("chart").innerHTML = chartSvg(e);
+    const future = e.chart.series.find((s) => s.role === "future");
+    const stock = e.chart.series.find((s) => s.role === "stock");
+    $("chart-legend").innerHTML = `
+        <span><svg width="28" height="6" aria-hidden="true"><line x1="0" y1="3" x2="28" y2="3" stroke="${COLORS.blue}" stroke-width="3"/></svg>${escapeHtml(future.instrument)} future best bid</span>
+        <span><svg width="28" height="6" aria-hidden="true"><line x1="0" y1="3" x2="28" y2="3" stroke="${COLORS.secondary}" stroke-width="2" stroke-dasharray="7 4"/></svg>${escapeHtml(stock.instrument)} stock best bid</span>
+        <span><svg width="14" height="12" aria-hidden="true"><polygon points="7,0 14,12 0,12" fill="${COLORS.blue}"/></svg>Order placed</span>
+        <span><svg width="14" height="14" aria-hidden="true"><polygon points="7,0 14,7 7,14 0,7" fill="${COLORS.coral}"/></svg>${escapeHtml(e.sale.account)} ${e.sale.side === "SELL" ? "sale" : "purchase"}</span>
+        <span><svg width="12" height="12" aria-hidden="true"><g stroke="${COLORS.blue}" stroke-width="2"><line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/></g></svg>Order cancelled</span>`;
+    $("chart-legend").title = "Times in UTC. Prices in ticks from the starting bid.";
+}
+
+function chartSvg(e) {
+    const W = 680, H = 310, left = 64, right = 640, top = 40, bottom = 210;
+    const { from, to, window: win, series, markers } = e.chart;
+    const values = series.flatMap((s) => s.points.map((p) => p.ticks));
+    const maxTick = Math.max(2, Math.ceil(Math.max(...values)));
+    const minTick = Math.min(0, Math.floor(Math.min(...values)));
+    const x = (t) => left + ((t - from) / (to - from)) * (right - left);
+    const y = (v) => bottom - ((v - minTick) / (maxTick - minTick)) * (bottom - top);
+
+    const parts = [];
+    for (let v = minTick; v <= maxTick; v++) {
+        parts.push(`<line x1="${left}" y1="${y(v)}" x2="${right}" y2="${y(v)}" stroke="${COLORS.grid}" stroke-dasharray="${v === 0 ? "" : "3 4"}"/>`);
+        parts.push(`<text x="${left - 8}" y="${y(v) + 4}" fill="${COLORS.secondary}" font-size="11" text-anchor="end" font-family="DM Mono">${v > 0 ? "+" : ""}${v}${v === maxTick ? " ticks" : ""}</text>`);
+    }
+    parts.push(`<rect x="${x(win[0])}" y="${top - 12}" width="${x(win[1]) - x(win[0])}" height="${bottom - top + 24}" fill="${COLORS.blue}" opacity="0.08"/>`);
+    parts.push(`<text x="${x(win[0]) + 6}" y="${top - 18}" fill="${COLORS.blue}" font-size="11" font-family="DM Mono" letter-spacing="1.5">PRESSURE WINDOW ${win[1].toFixed(1)} S</text>`);
+
+    for (const s of series) {
+        const points = s.points.filter((p) => p.t >= from && p.t <= to);
+        if (!points.length) continue;
+        let d = `M${x(from)} ${y(points[0].ticks)} H${x(points[0].t)}`;
+        for (const p of points) d += ` V${y(p.ticks)} H${x(p.t)}`;
+        d += ` H${x(to)}`;
+        const hero = s.role === "future";
+        parts.push(`<path d="${d}" transform="translate(0 ${hero ? 0 : 3})" fill="none" stroke="${hero ? COLORS.blue : COLORS.secondary}" stroke-width="${hero ? 3 : 2}" ${hero ? `style="filter: drop-shadow(0 0 6px rgba(56,182,255,0.6))"` : `stroke-dasharray="7 4"`}/>`);
+    }
+
+    const rowY = 238;
+    const pressure = markers.filter((m) => m.kind === "pressure");
+    const sale = markers.find((m) => m.kind === "sale");
+    const cancels = markers.filter((m) => m.kind === "cancel");
+    // Orders and cancels arrive milliseconds apart, so each group is one marker; the labels give the count.
+    const px = x(pressure[0].t);
+    parts.push(`<polygon points="${px},${rowY} ${px + 7},${rowY + 13} ${px - 7},${rowY + 13}" fill="${COLORS.blue}"/>`);
+    if (sale) parts.push(`<polygon points="${x(sale.t)},${rowY - 2} ${x(sale.t) + 9},${rowY + 7} ${x(sale.t)},${rowY + 16} ${x(sale.t) - 9},${rowY + 7}" fill="${COLORS.coral}"/>`);
+    if (cancels.length) {
+        const cx = x(cancels[0].t), cy = rowY + 7;
+        parts.push(`<g stroke="${COLORS.blue}" stroke-width="2.5"><line x1="${cx - 6}" y1="${cy - 6}" x2="${cx + 6}" y2="${cy + 6}"/><line x1="${cx + 6}" y1="${cy - 6}" x2="${cx - 6}" y2="${cy + 6}"/></g>`);
+    }
+
+    const p = e.pressure;
+    const labelY = rowY + 34;
+    parts.push(`<text x="${x(pressure[0].t) - 10}" y="${labelY}" fill="${COLORS.secondary}" font-size="12" text-anchor="end">${p.layers} × ${p.size}-lot ${p.side === "BUY" ? "bids" : "offers"}</text>`);
+    if (sale) parts.push(`<text x="${x(sale.t)}" y="${labelY + 16}" fill="#FFFFFF" font-size="12" text-anchor="middle">${escapeHtml(e.sale.account)} ${e.sale.side === "SELL" ? "sells" : "buys"} ${formatNumber(e.sale.qty)}</text>`);
+    if (cancels.length) parts.push(`<text x="${x(cancels[cancels.length - 1].t) + 12}" y="${labelY}" fill="${COLORS.secondary}" font-size="12">All ${cancels.length} cancelled, ${formatNumber(p.filled)} filled</text>`);
+
+    for (const t of [from, 0, Math.round((to + from) / 2 + 1), to]) {
+        parts.push(`<text x="${x(t)}" y="${H - 4}" fill="${COLORS.secondary}" font-size="11" text-anchor="middle" font-family="DM Mono">${t > 0 ? "+" : t < 0 ? "−" : ""}${Math.abs(t)} s</text>`);
+    }
+
+    const label = `Step chart over ${to - from} seconds. ${series[0].instrument} best bid rises ${e.future_lift_ticks} ticks after ${p.layers} large orders; ` +
+        `${e.sale.stock} follows ${e.stock_lift_ticks} ticks. ${e.sale.account} ${e.sale.side === "SELL" ? "sells" : "buys"} ${formatNumber(e.sale.qty)} at ${e.gap_s.toFixed(1)} seconds, then all orders are cancelled.`;
+    return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${escapeHtml(label)}" font-family="Manrope, sans-serif">${parts.join("")}</svg>`;
+}
+
+function renderEpisodeTable() {
+    const c = currentCase;
+    $("th-pressure").textContent = `Pressure leg (${c.pressure_account})`;
+    $("th-sale").textContent = `Execution leg (${c.sale_account})`;
+    $("episode-rows").innerHTML = c.episodes.map((e, i) => `
+        <tr class="selectable ${i === currentEpisode ? "selected" : ""}" data-episode="${i}">
+            <td><b>${escapeHtml(e.id)}</b> · ${escapeHtml(formatWhen(e.start))}</td>
+            <td>${escapeHtml(e.pressure.future)} ${e.pressure.side.toLowerCase()} ${e.pressure.layers} × ${formatNumber(e.pressure.size)}</td>
+            <td class="num">${formatNumber(e.pressure.cancelled)} / ${formatNumber(e.pressure.total)}</td>
+            <td>${escapeHtml(e.sale.stock)} ${e.sale.side.toLowerCase()} ${formatNumber(e.sale.qty)} @ ${formatNumber(e.sale.price)}</td>
+            <td class="num">${e.gap_s.toFixed(1)} s</td>
+            <td class="num">${formatDuration(e.call_before_s)}</td>
+        </tr>`).join("");
+    document.querySelectorAll("#episode-rows tr").forEach((row) =>
+        row.addEventListener("click", () => selectEpisode(Number(row.dataset.episode))));
+}
+
+document.querySelectorAll("[data-decision]").forEach((button) =>
+    button.addEventListener("click", () => {
+        $("decision").textContent = `${button.dataset.decision}. Demo only: nothing is saved.`;
+    }));
+
+/* ------------------------------------------------------------
+   Communications
+------------------------------------------------------------ */
+
+function highlight(text, marks) {
+    let html = "", last = 0;
+    for (const [start, end] of marks) {
+        html += escapeHtml(text.slice(last, start)) + `<mark>${escapeHtml(text.slice(start, end))}</mark>`;
+        last = end;
+    }
+    return html + escapeHtml(text.slice(last));
+}
+
+function shortSpeaker(name) {
+    if (!name) return "";
+    if (name.includes("(")) return name.split(" ")[0];
+    const parts = name.split(" ");
+    return parts.length > 1 ? `${parts[0][0]}. ${parts.slice(1).join(" ")}` : name;
+}
+
+function callCard(call) {
+    const lines = call.lines.map((l) => `
+        <span class="speaker">${escapeHtml(shortSpeaker(l.speaker))}</span>
+        <span>${highlight(l.text, l.marks)}</span>`).join("");
+    // The closed row shows the longest highlighted phrase as a teaser.
+    const phrases = call.lines.flatMap((l) => l.marks.map(([s, e]) => l.text.slice(s, e)));
+    const quote = phrases.sort((a, b) => b.length - a.length)[0] || call.lines[0]?.text || "";
+    return `<details class="inner call ${call.note ? "flagged" : ""}" ${call.note ? "open" : ""}>
+        <summary>
+            <span class="call-id">${escapeHtml(call.evidence)}</span>
+            <span class="call-quote">“${escapeHtml(quote)}”</span>
+            <span class="call-lead">${formatDuration(call.before_s)} before ${escapeHtml(call.episode)}</span>
+        </summary>
+        <div class="mono muted" style="margin-bottom: 8px;">${escapeHtml(formatWhen(call.ts))} UTC · ${escapeHtml(call.channel)} · ${call.duration_s} s</div>
+        <div class="lines">${lines}</div>
+        ${call.note ? `<p class="note" style="margin-top: 10px;">${escapeHtml(call.note)}</p>` : ""}
+    </details>`;
+}
+
+function renderComms() {
+    const c = currentCase;
+    if (!c.calls.length && !c.logins.length) {
+        $("comms-eyebrow").textContent = "Calls";
+        $("calls").innerHTML = `<p class="muted">None: both legs sit in one account.</p>`;
+        $("logins-line").textContent = "";
+        return;
+    }
+    $("comms-eyebrow").textContent = `Calls · ${c.trader.name} → ${c.counterparty.name}`;
+    $("calls").innerHTML = c.calls.map(callCard).join("");
+    const leads = c.logins.map((l) => l.before_s);
+    $("logins-line").textContent = leads.length
+        ? `${c.sale_account} DMA login ${formatDuration(Math.min(...leads))} to ${formatDuration(Math.max(...leads))} before each episode`
+        : "";
+    $("logins-line").title = c.logins.map((l) => `${formatWhen(l.ts)} · ${l.episode} · ${l.source_ip}`).join("\n");
+}
+
+/* ------------------------------------------------------------
+   Graphs: the small case graph and the graph explorer share one renderer
+------------------------------------------------------------ */
+
+const EDGE_STYLE = {
+    declared: `stroke="${COLORS.baseline}" stroke-opacity="0.75" stroke-width="1.5"`,
+    key: `stroke="${COLORS.coral}" stroke-width="3"`,
+    inferred: `stroke="${COLORS.blue}" stroke-width="2" stroke-dasharray="7 5"`,
+    activity: `stroke="rgba(255,255,255,0.22)" stroke-width="1"`,
+    point_in_time: `stroke="${COLORS.secondary}" stroke-width="1.5" stroke-dasharray="2 4"`,
+    inactive: `stroke="rgba(255,255,255,0.22)" stroke-width="1.5" stroke-dasharray="3 6"`,
+};
+const INSTRUMENT_ROLES = ["future", "index", "stock"];
+
+function shortEdgeLabel(label) {
+    return (label || "")
+        .replace("SHARED RESIDENTIAL ADDRESS", "SHARED ADDRESS")
+        .replace("BENEFICIAL OWNER OF", "BENEFICIAL OWNER")
+        .replace("COMPLEMENTARY TRADING (INFERRED)", "COMPLEMENTARY TRADING");
+}
+
+function graphLayout(nodes, sameAccount) {
+    const pos = {};
+    const byRole = (role) => nodes.filter((n) => n.role === role);
+    const spread = (list, x0, x1, y) => list.forEach((n, i) => {
+        pos[n.id] = { x: list.length === 1 ? (x0 + x1) / 2 : x0 + (i * (x1 - x0)) / (list.length - 1), y };
+    });
+    if (sameAccount) {
+        spread(byRole("trader"), 280, 280, 70);
+        spread(byRole("account"), 280, 280, 200);
+        spread(byRole("link"), 140, 420, 135);
+    } else {
+        spread(byRole("trader"), 80, 80, 92);
+        spread(byRole("link"), 300, 300, 28);
+        spread(byRole("counterparty"), 470, 470, 112);
+        spread(byRole("pressure_account"), 90, 90, 222);
+        spread(byRole("sale_account"), 470, 470, 248);
+    }
+    // Futures sit bottom left, stocks bottom right, and any index on a row of its own beneath them.
+    spread(byRole("future"), 60, 200, 340);
+    spread(byRole("stock"), 360, 500, 340);
+    spread(byRole("index"), 250, 310, 520);
+    return pos;
+}
+
+function graphSvg(g, sameAccount, pos = graphLayout(g.nodes, sameAccount)) {
+    const role = Object.fromEntries(g.nodes.map((n) => [n.id, n.role]));
+    const keyNodes = new Set(g.edges.filter((e) => e.kind === "key").flatMap((e) => [e.from, e.to]));
+    const lines = [], labels = [];
+    let deepest = 380;
+
+    // Links between two instruments on the same row arc underneath it, longest deepest.
+    const arcs = g.edges.filter((e) => INSTRUMENT_ROLES.includes(role[e.from]) && INSTRUMENT_ROLES.includes(role[e.to])
+            && pos[e.from] && pos[e.to] && pos[e.from].y === pos[e.to].y)
+        .sort((a, b) => Math.abs(pos[a.from].x - pos[a.to].x) - Math.abs(pos[b.from].x - pos[b.to].x));
+    const hasIndex = g.nodes.some((n) => n.role === "index");
+    if (hasIndex) deepest = 560;
+    const indexSides = { left: 0, right: 0 };
+    arcs.forEach((e, i) => {
+        const a = pos[e.from], b = pos[e.to];
+        const depth = (hasIndex ? 14 : 28) + Math.abs(a.x - b.x) * (hasIndex ? 0.05 : 0.12) + i * 22;
+        const base = a.y + 17;
+        lines.push(`<path class="gedge" data-a="${escapeHtml(e.from)}" data-b="${escapeHtml(e.to)}" d="M${a.x} ${base} Q ${(a.x + b.x) / 2} ${base + depth * 2} ${b.x} ${base}" fill="none" ${EDGE_STYLE[e.kind] || EDGE_STYLE.declared}/>`);
+        labels.push(edgeLabel((a.x + b.x) / 2, base + depth + 12, shortEdgeLabel(e.label), e.kind, "middle", e));
+        deepest = Math.max(deepest, base + depth + 24);
+    });
+
+    for (const e of g.edges) {
+        if (arcs.includes(e)) continue;
+        const a = pos[e.from], b = pos[e.to];
+        if (!a || !b) continue;
+        lines.push(`<line class="gedge" data-a="${escapeHtml(e.from)}" data-b="${escapeHtml(e.to)}" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" ${EDGE_STYLE[e.kind] || EDGE_STYLE.declared}/>`);
+        const text = shortEdgeLabel(e.label);
+        if (role[e.to] === "index" || role[e.from] === "index") {
+            // Lines into an index converge, so each label sits beside its own line, staggered by side.
+            const [outer, index] = role[e.to] === "index" ? [a, b] : [b, a];
+            const side = outer.x < index.x ? "left" : "right";
+            const t = 0.45 + 0.2 * indexSides[side]++;
+            const x = outer.x + (index.x - outer.x) * t + (side === "left" ? -8 : 8);
+            if (text) labels.push(edgeLabel(x, outer.y + (index.y - outer.y) * t, text, e.kind, side === "left" ? "end" : "start", e));
+            continue;
+        }
+        // The key link runs up to a node near the top edge, so label it nearer its start.
+        const t = e.kind === "key" ? 0.4 : 0.5;
+        // Account-to-account links run almost flat, so their label sits underneath the line.
+        const betweenAccounts = role[e.from]?.endsWith("account") && role[e.to]?.endsWith("account");
+        if (text) labels.push(edgeLabel(a.x + (b.x - a.x) * t, a.y + (b.y - a.y) * t + (betweenAccounts ? 14 : -6), text, e.kind, "middle", e));
+    }
+
+    const boxes = g.nodes.map((n) => {
+        const p = pos[n.id];
+        if (!p) return "";
+        const instrument = INSTRUMENT_ROLES.includes(n.role);
+        const w = instrument ? 84 : 136, h = instrument ? 34 : 46;
+        const stroke = keyNodes.has(n.id) ? COLORS.coral : (n.role === "trader" ? COLORS.blue : "rgba(255,255,255,0.24)");
+        const title = instrument ? n.id : n.label;
+        const sub = instrument ? "" : (n.id === n.label ? n.sub : `${n.id}${n.sub && !n.sub.startsWith(n.id) ? " · " + n.sub : n.sub.replace(n.id, "")}`);
+        return `<g class="gnode" data-id="${escapeHtml(n.id)}" tabindex="0" role="button" aria-label="${escapeHtml(title + (sub ? ", " + sub : ""))}">
+            <rect x="${p.x - w / 2}" y="${p.y - h / 2}" width="${w}" height="${h}" rx="10" fill="${COLORS.panel}" stroke="${stroke}"/>
+            <text x="${p.x}" y="${p.y + (sub ? -3 : 4)}" fill="#FFFFFF" font-size="12" font-weight="600" text-anchor="middle">${escapeHtml(title)}</text>
+            ${sub ? `<text x="${p.x}" y="${p.y + 13}" fill="${COLORS.secondary}" font-size="10" text-anchor="middle">${escapeHtml(sub.length > 22 ? sub.slice(0, 21) + "…" : sub)}</text>` : ""}
+        </g>`;
+    });
+    const described = g.edges.filter((e) => e.label).map((e) => `${e.from} ${e.label.toLowerCase()} ${e.to}`).join("; ");
+    return `<svg viewBox="0 0 560 ${Math.ceil(deepest)}" role="img" aria-label="${escapeHtml("Entity graph. " + described)}" font-family="Manrope, sans-serif">
+        ${lines.join("")}${labels.join("")}${boxes.join("")}</svg>`;
+}
+
+function edgeLabel(x, y, text, kind, anchor = "middle", edge = null) {
+    const fill = { key: COLORS.coral, inferred: COLORS.blue, inactive: "rgba(200,211,227,0.55)" }[kind] || COLORS.secondary;
+    const ends = edge ? `class="glabel" data-a="${escapeHtml(edge.from)}" data-b="${escapeHtml(edge.to)}"` : "";
+    return `<text ${ends} x="${x}" y="${y}" fill="${fill}" font-size="9.5" text-anchor="${anchor}" font-family="DM Mono" letter-spacing="0.8"
+        paint-order="stroke" stroke="${COLORS.navy}" stroke-width="4" stroke-linejoin="round">${escapeHtml(text)}</text>`;
+}
+
+function renderLegends() {
+    document.querySelectorAll("[data-legend]").forEach((el) => {
+        el.innerHTML = `
+            <span><svg width="24" height="6" aria-hidden="true"><line x1="0" y1="3" x2="24" y2="3" ${EDGE_STYLE.declared}/></svg>Declared (HR, KYC, reference data)</span>
+            <span><svg width="24" height="6" aria-hidden="true"><line x1="0" y1="3" x2="24" y2="3" ${EDGE_STYLE.inferred}/></svg>Inferred from behaviour</span>
+            <span><svg width="24" height="6" aria-hidden="true"><line x1="0" y1="3" x2="24" y2="3" ${EDGE_STYLE.point_in_time}/></svg>Index membership (dated)</span>
+            <span><svg width="24" height="6" aria-hidden="true"><line x1="0" y1="3" x2="24" y2="3" ${EDGE_STYLE.key}/></svg>Key hidden link</span>
+            ${el.hasAttribute("data-inactive") ? `<span><svg width="24" height="6" aria-hidden="true"><line x1="0" y1="3" x2="24" y2="3" ${EDGE_STYLE.inactive}/></svg>Not valid on this date</span>` : ""}`;
+    });
+}
+
+/* ------------------------------------------------------------
+   Graph explorer page
+------------------------------------------------------------ */
+
+let graphRequest = 0;
+
+async function renderGraphView() {
+    const c = currentCase;
+    $("graph-eyebrow").textContent = `Network · ${c.id}`;
+    $("graph-title").textContent = `${c.trader.name} and ${c.kind === "same_account" ? c.pressure_account : c.counterparty.name}`;
+    $("graph-meta").textContent = "Querying Black Forest";
+    const request = ++graphRequest;
+    try {
+        const g = await getJson(`/api/graph?${new URLSearchParams({ case_id: c.id })}`);
+        if (request !== graphRequest) return;
+        $("graph-meta").textContent = g.cached
+            ? `Loaded earlier · ${g.queries.length} live queries took ${formatMs(g.ms)}`
+            : `${g.queries.length} live queries · ${formatMs(g.ms)}`;
+        showGraph(g, c);
+    } catch (error) {
+        $("graph-meta").textContent = "";
+        $("big-graph").innerHTML = `<p class="alert-text">${escapeHtml(error.message)}</p>`;
+    }
+}
+
+/* Interactive graph: drag nodes, hover to trace links, click to filter the links table, zoom and pan */
+
+const graph = { data: null, caseId: null, sameAccount: false, pos: null, base: null, view: null, hover: null, hoverLink: null, selected: null };
+const movedNodes = {};  // per case, nodes the analyst has dragged, kept while the page is open
+
+function showGraph(g, c) {
+    const fresh = graph.caseId !== c.id;
+    Object.assign(graph, { data: g, caseId: c.id, sameAccount: c.kind === "same_account", base: null, hoverLink: null });
+    if (fresh) Object.assign(graph, { view: null, hover: null, selected: null });
+    if (graph.selected && !g.nodes.some((n) => n.id === graph.selected)) graph.selected = null;
+    graph.pos = { ...graphLayout(g.nodes, graph.sameAccount), ...(movedNodes[c.id] || {}) };
+    drawGraph();
+    renderLinkRows();
+}
+
+function drawGraph() {
+    const box = $("big-graph");
+    box.innerHTML = graphSvg(graph.data, graph.sameAccount, graph.pos);
+    const svg = box.querySelector("svg");
+    if (!graph.base) {
+        const [, , w, h] = svg.getAttribute("viewBox").split(" ").map(Number);
+        graph.base = { x: 0, y: 0, w, h };
+    }
+    setView(graph.view || graph.base);
+    applyFocus();
+}
+
+function setView(v) {
+    graph.view = v;
+    $("big-graph").querySelector("svg")?.setAttribute("viewBox", `${v.x} ${v.y} ${v.w} ${v.h}`);
+}
+
+function neighbours(id) {
+    const ids = new Set([id]);
+    graph.data.edges.forEach((e) => { if (e.from === id) ids.add(e.to); if (e.to === id) ids.add(e.from); });
+    return ids;
+}
+
+function applyFocus() {
+    const box = $("big-graph");
+    const id = graph.hover || graph.selected;
+    const link = graph.hoverLink;
+    box.classList.toggle("focus", Boolean(id || link));
+    const near = link ? new Set([link.from, link.to]) : id ? neighbours(id) : new Set();
+    const lit = (el) => link
+        ? (el.dataset.a === link.from && el.dataset.b === link.to) || (el.dataset.a === link.to && el.dataset.b === link.from)
+        : Boolean(id) && (el.dataset.a === id || el.dataset.b === id);
+    box.querySelectorAll(".gedge, .glabel").forEach((el) => el.classList.toggle("hl", lit(el)));
+    box.querySelectorAll(".gnode").forEach((el) => {
+        el.classList.toggle("hl", near.has(el.dataset.id));
+        el.classList.toggle("selected", el.dataset.id === graph.selected);
+    });
+}
+
+function renderLinkRows() {
+    const g = graph.data;
+    const id = graph.selected;
+    const links = id ? g.links.filter((l) => l.from === id || l.to === id) : g.links;
+    const filter = $("link-filter");
+    filter.hidden = !id;
+    if (id) {
+        const node = g.nodes.find((n) => n.id === id);
+        filter.innerHTML = `<span>Showing ${links.length} ${links.length === 1 ? "link" : "links"} for <b>${escapeHtml(node?.label || id)}</b></span>
+            <button class="link" type="button" id="show-all-links">Show all</button>`;
+        $("show-all-links").addEventListener("click", () => selectNode(null));
+        $("graph-links").open = true;
+    }
+    const active = g.links.filter((l) => l.status === "active").length;
+    $("links-meta").textContent = `${active} of ${g.links.length} active`;
+    $("link-rows").innerHTML = links.map((l) => `
+        <tr class="${l.status === "active" ? "" : "faded"}" data-from="${escapeHtml(l.from)}" data-to="${escapeHtml(l.to)}">
+            <td><b>${escapeHtml(l.type)}</b><div class="mono muted">${escapeHtml(l.id)}</div></td>
+            <td>${escapeHtml(l.from_name)}<div class="mono muted">${escapeHtml(l.from)}</div></td>
+            <td>${escapeHtml(l.to_name)}<div class="mono muted">${escapeHtml(l.to)}</div></td>
+            <td>${escapeHtml(l.source)}<div class="mono muted">${escapeHtml(l.provenance)}</div></td>
+            <td class="num">${l.confidence === null ? "" : Number(l.confidence).toFixed(2)}</td>
+            <td class="num">${l.valid_from ? escapeHtml(formatDay(l.valid_from)) + " " + l.valid_from.slice(0, 4) : ""}</td>
+            <td><span class="verdict ${l.status === "active" ? "active" : "cleared"}">${escapeHtml(l.status_text)}</span></td>
+        </tr>`).join("");
+    // Hovering a row lights up its line in the graph.
+    document.querySelectorAll("#link-rows tr").forEach((row) => {
+        row.addEventListener("mouseenter", () => {
+            graph.hoverLink = { from: row.dataset.from, to: row.dataset.to };
+            row.classList.add("hl");
+            applyFocus();
+        });
+        row.addEventListener("mouseleave", () => {
+            graph.hoverLink = null;
+            row.classList.remove("hl");
+            applyFocus();
+        });
+    });
+}
+
+function selectNode(id) {
+    graph.selected = id;
+    applyFocus();
+    renderLinkRows();
+}
+
+function svgPoint(event) {
+    const svg = $("big-graph").querySelector("svg");
+    const pt = svg.createSVGPoint();
+    pt.x = event.clientX;
+    pt.y = event.clientY;
+    return pt.matrixTransform(svg.getScreenCTM().inverse());
+}
+
+function zoomAt(point, factor) {
+    const v = graph.view, b = graph.base;
+    const w = Math.min(b.w * 3, Math.max(b.w * 0.35, v.w * factor));
+    const k = w / v.w;
+    setView({ x: point.x - (point.x - v.x) * k, y: point.y - (point.y - v.y) * k, w, h: v.h * k });
+}
+
+(function bindGraph() {
+    const stage = $("big-graph");
+    let drag = null;
+
+    stage.addEventListener("pointerdown", (event) => {
+        if (!graph.data || event.button !== 0) return;
+        const node = event.target.closest(".gnode");
+        const p = svgPoint(event);
+        drag = node
+            ? { kind: "node", id: node.dataset.id, dx: graph.pos[node.dataset.id].x - p.x, dy: graph.pos[node.dataset.id].y - p.y }
+            : { kind: "pan", view: { ...graph.view }, scale: graph.view.w / stage.querySelector("svg").getBoundingClientRect().width };
+        Object.assign(drag, { x0: event.clientX, y0: event.clientY, moved: false });
+        stage.setPointerCapture(event.pointerId);
+        stage.classList.add("dragging");
+    });
+
+    stage.addEventListener("pointermove", (event) => {
+        if (!drag) return;
+        if (!drag.moved && Math.hypot(event.clientX - drag.x0, event.clientY - drag.y0) < 4) return;
+        drag.moved = true;
+        if (drag.kind === "node") {
+            const p = svgPoint(event);
+            graph.pos[drag.id] = { x: p.x + drag.dx, y: p.y + drag.dy };
+            movedNodes[graph.caseId] = { ...(movedNodes[graph.caseId] || {}), [drag.id]: graph.pos[drag.id] };
+            graph.hover = drag.id;
+            drawGraph();
+        } else {
+            setView({ ...drag.view, x: drag.view.x - (event.clientX - drag.x0) * drag.scale, y: drag.view.y - (event.clientY - drag.y0) * drag.scale });
+        }
+    });
+
+    const end = () => {
+        if (!drag) return;
+        if (!drag.moved) selectNode(drag.kind === "node" ? (graph.selected === drag.id ? null : drag.id) : null);
+        drag = null;
+        stage.classList.remove("dragging");
+    };
+    stage.addEventListener("pointerup", end);
+    stage.addEventListener("pointercancel", end);
+
+    stage.addEventListener("pointerover", (event) => {
+        const node = event.target.closest(".gnode");
+        if (node && !drag) { graph.hover = node.dataset.id; applyFocus(); }
+    });
+    stage.addEventListener("pointerout", (event) => {
+        const node = event.target.closest(".gnode");
+        if (node && !drag && !node.contains(event.relatedTarget)) { graph.hover = null; applyFocus(); }
+    });
+    stage.addEventListener("focusin", (event) => {
+        const node = event.target.closest(".gnode");
+        if (node) { graph.hover = node.dataset.id; applyFocus(); }
+    });
+    stage.addEventListener("focusout", () => { if (!drag) { graph.hover = null; applyFocus(); } });
+    stage.addEventListener("keydown", (event) => {
+        const node = event.target.closest(".gnode");
+        if (node && (event.key === "Enter" || event.key === " ")) {
+            event.preventDefault();
+            selectNode(graph.selected === node.dataset.id ? null : node.dataset.id);
+        }
+    });
+
+    stage.addEventListener("wheel", (event) => {
+        if (!graph.data) return;
+        event.preventDefault();
+        zoomAt(svgPoint(event), event.deltaY > 0 ? 1.15 : 1 / 1.15);
+    }, { passive: false });
+
+    const centre = () => ({ x: graph.view.x + graph.view.w / 2, y: graph.view.y + graph.view.h / 2 });
+    $("zoom-in").addEventListener("click", () => graph.data && zoomAt(centre(), 1 / 1.25));
+    $("zoom-out").addEventListener("click", () => graph.data && zoomAt(centre(), 1.25));
+    $("zoom-reset").addEventListener("click", () => {
+        if (!graph.data) return;
+        delete movedNodes[graph.caseId];
+        Object.assign(graph, { pos: graphLayout(graph.data.nodes, graph.sameAccount), view: null, base: null });
+        selectNode(null);
+        drawGraph();
+    });
+})();
+
+/* ------------------------------------------------------------
+   Metrics page
+------------------------------------------------------------ */
+
+function renderMetricsView() {
+    const c = currentCase;
+    $("metrics-title").textContent = `${c.trace.length} steps · ${investigation.queries} queries · ${formatMs(investigation.query_ms)}`;
+    $("trace-steps").innerHTML = c.trace.map((step, i) => `
+        <li>
+            <span class="step-no">${i + 1}</span>
+            <div>
+                <div class="step-title">${escapeHtml(step.title)}</div>
+                <div class="step-detail">${escapeHtml(step.detail)}</div>
+            </div>
+            <span class="step-time">${step.queries ? `${step.queries} ${step.queries === 1 ? "query" : "queries"} · ${formatMs(step.ms)}` : "Uses steps 1 to 3"}</span>
+        </li>`).join("");
+    $("queries-meta").textContent = `${investigation.queries} · ${formatMs(investigation.query_ms)}`;
+    $("query-rows").innerHTML = investigation.log.map((q, i) => `
+        <tr>
+            <td class="num">${i + 1}</td>
+            <td>${escapeHtml(STEP_NAMES[q.step] || q.step)}</td>
+            <td class="num">${formatNumber(q.rows)}</td>
+            <td class="num">${formatMs(q.ms)}</td>
+            <td><details><summary class="mono">${escapeHtml(q.sql.split(" FROM ")[1]?.split(" ")[0]?.split(".").pop() || "SQL")}</summary><pre class="sql">${escapeHtml(q.sql)}</pre></details></td>
+        </tr>`).join("");
+}
+
+$("export").addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify({
+        case: currentCase.id,
+        generated_at: investigation.generated_at,
+        steps: currentCase.trace,
+        queries: investigation.log,
+    }, null, 2)], { type: "application/json" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = `${currentCase.id}-audit-trail.json`;
+    link.click();
+    URL.revokeObjectURL(link.href);
+});
+
+renderLegends();
+loadStatus();
+start();
+</script>
+</body>
+</html>

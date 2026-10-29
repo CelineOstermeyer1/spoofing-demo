@@ -1,0 +1,199 @@
+{
+  "catalogName": "demoCatalog",
+  "namespaceName": "demoNamespace",
+  "name": "commsRefDataTable",
+  "exportable": true,
+  "remote": false,
+  "securityLabel": {
+    "level": 101,
+    "compartment": 0,
+    "group": 0
+  },
+  "primaryIndex": {
+    "catalogName": "demoCatalog",
+    "namespaceName": "demoNamespace",
+    "tableName": "commsRefDataTable",
+    "name": "commsRefDataIndex",
+    "versions": [
+      {
+        "name": "commsRefDataPIX",
+        "predicates": [
+          {
+            "name": "commsRefPredicateSchema",
+            "schema": {
+              "name": "commsRefSchema",
+              "version": 1,
+              "fields": [
+                {
+                  "id": {
+                    "columnName": "subject"
+                  },
+                  "dataType": {
+                    "dataType": "TUPLESTRING"
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "comm_id"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "timestamp_utc"
+                  },
+                  "dataType": {
+                    "dataType": "TIMESTAMP",
+                    "chronoPrecision": "MILLIS",
+                    "indexParameters": {
+                      "startDate": 1767225600000,
+                      "durationInUnits": 0,
+                      "units": "MILLIS",
+                      "hashSeed": 0
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "channel"
+                  },
+                  "dataType": {
+                    "dataType": "TEXT"
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "from_party"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "to_party"
+                  },
+                  "dataType": {
+                    "dataType": "TEXT"
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "to_party_id"
+                  },
+                  "dataType": {
+                    "dataType": "VARCHAR",
+                    "indexParameters": {
+                      "hashSeed": 425123
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                },
+                {
+                  "id": {
+                    "columnName": "duration_s"
+                  },
+                  "dataType": {
+                    "dataType": "INTEGER",
+                    "indexParameters": {
+                      "anchor": 0,
+                      "range": 0,
+                      "hashSeed": 0
+                    }
+                  },
+                  "securityLabel": {
+                    "level": 1,
+                    "compartment": 0,
+                    "group": 0
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "fields": {
+          "subject": {
+            "name": "subject",
+            "columnIndex": 1,
+            "dataType": {
+              "dataType": "TUPLESTRING"
+            },
+            "securityLabel": {
+              "level": 1,
+              "compartment": 0,
+              "group": 0
+            },
+            "notNullConstraint": false,
+            "objectConstraint": false,
+            "objectDataConstraint": false,
+            "predicateConstraint": false,
+            "primaryKeyConstraint": true,
+            "signatureConstraint": false,
+            "transactionBufferConstraint": false,
+            "uniqueConstraint": false,
+            "key1SegmentDepth": 17,
+            "key2SegmentDepth": 13,
+            "key3SegmentDepth": 13
+          }
+        },
+        "key1SegmentInfo": 17,
+        "key2SegmentInfo": 13,
+        "key3SegmentInfo": 13,
+        "version": 1
+      }
+    ],
+    "indexType": "CLUSTERED_INDEX"
+  },
+  "secondaryIndexes": [],
+  "attributes": [
+    "BlackForestCatalogUser",
+    "BlackForestIngestPipelineUser",
+    "BlackForestRootIdentityAuthority",
+    "BlackForestAppFrameworkUser",
+    "d647a6fc-9c6f-4a07-b50e-08590622579f",
+    "BlackForestIdentityAuditor",
+    "BlackForestResourceManagerAdministrator"
+  ]
+}

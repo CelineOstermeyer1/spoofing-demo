@@ -1,0 +1,11 @@
+actor_id,name,actor_type,desk,role
+T101,Alex Morrow,Employee,Equity Derivatives Trading,Trader
+T104,Jordan Kerr,Employee,Equity Derivatives Trading,Trader
+T120,Sam Okafor,Employee,Index Arbitrage,Trader
+T130,Priya Nair,Employee,Cash Equities,Trader
+T131,Tom Ellery,Employee,Cash Equities,Trader
+C3107,Fenwick Capital Ltd,Client legal entity,,DMA client
+C3200,Larchmont Asset Management,Client legal entity,,Institutional client
+C3201,Ardent Pension Fund,Client legal entity,,Institutional client
+BO551,Riley Kerr,Beneficial owner,,UBO of Fenwick Capital Ltd
+BO560,Morgan Hale,Beneficial owner,,UBO of Larchmont Asset Management
